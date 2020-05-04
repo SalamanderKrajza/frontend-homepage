@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksander Krysa - WTF notes</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <section class="top">
+        <header>
+            <span class="title1">Aleksander Krysa </span>
+            <span class="title2">"błądząc w krainie frontendu" </span>
+            <span class="description1">notatki ze szkolenia </span>
+            <a href="https://cotenfrontend.pl/">
+                <span class="description2">WTF </span>
+                <span class="description3">co ten </span>
+                <span class="description4">frontend</span>
+            </a>
+        </header>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#top" class="up">↑ Powrót na górę ↑</a></li>
+            <li><a href="library.html">Przydatne materiały</a></li>
+            <li><a href="notes.html">Notatki z tygodni</a></li>
+            <li><a href="index.html">O stronie</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Jakich rzeczy udało mi się dowiedzieć?</h1>
+        </header>
+        
+        <ul class="horizontal-list">
+            <li><a href="#week1">Tydzień 1</a></li>
+            <li><a href="#week2">Tydzień 2</a></li>
+            <li><a href="#week3">Tydzień 3</a></li>
+            <li><a href="#week4">Tydzień 4</a></li>
+            <li><a href="#week5">Tydzień 5</a></li>
+            <li><a href="#week6">Tydzień 6</a></li>
+            <li><a href="#week7">Tydzień 7</a></li>
+            <li><a href="#week8">Tydzień 8</a></li>
+            <li><a href="#week9">Tydzień 9</a></li>
+            <li><a href="#week10">Tydzień 10</a></li>
+            <li><a href="#week11">Tydzień 11</a></li>
+            <li><a href="#week12">Tydzień 12</a></li>
+            <li><a href="#week13">Tydzień 13</a></li>
+        </ul>
+
+        <!-- START OF WEEEK -->
+        <section id="week1" class="anchorOffset">
+            <h2>Tydzień 1:</h2>
+            <article>
+                <h3>Absolutnie niczego</h3>
+                <p>Choć to raczej nic dziwnego, z racji, że był to tydzień czysto
+                    organizacyjny.</p>
+            </article>
+        </section>
+
+        <!-- START OF WEEEK -->
+        <section id="week2" class="anchorOffset">
+            <h2>Tydzień 2:</h2>
+            <article>
+                <h3>Znaczniki &lt;main&gt;&lt;section&gt;&lt;article&gt;</h3>
+                <p>Kiedy tworzyłem swoje pierwsze strony nie używałem ich. Miałem okazję je później
+                    poznać, ale dopiero wyrabiam nawyk ich używania.</p>
+            </article>
+
+            <article>
+                <h3>Validator kodu</h3>
+                <p>Dostępnego pod <a href="https://validator.w3.org/nu/#textarea">tym adresem</a>
+                    validatora kodu nie używałem ani nie widziałem wcześniej. Wydaje się fajnym rozwiązaniem.</p>
+            </article>
+
+            <article>
+                <h3>Kończenie szkieletu strony przez ! + TAB</h3>
+                <p>Wcześniej nie używałem VSC do pisania stron więc nie znam jeszcze wszystkich jego
+                    funkcjonalności. Szkielet strony to fajne rozwiązanie, choć z racji, że wcześniej
+                    używałem VSC do tworzenia projektów w django, wymagał ręcznego przestawienia
+                    "Language mode" na HTML żeby dało się tego użyć.</p>
+            </article>
+
+            <article class="red-border">
+                <h3>Dodatkowe pytania:</h3>
+                <ul>
+                    <li>
+                        Kiedy używamy znacznika &lt;header&gt; a kiedy nie?
+                        Według informacji na slajdach, można go użyć zarówno do main, section oraz article, jednak w
+                        szkoleniu nie został wykorzystany przy artykułach. Dlaczego?
+                        <ul class="green-text">
+                            <li>Header kiedy mamy bardziej złożony nagłówek niż tylko h1-6 </li>
+                        </ul>
+                    </li>
+                    <li>Jaka jest poprawna forma wypisywania tagów HTML jako kodu? Tag "XMP" którego użyłem?
+                        Zastąpienie &lt; przez &amp;lt; oraz &gt; przez &amp;gt;? Jeszcze coś innego?
+                        <ul class="green-text">
+                            <li>"xmp to prehistoria :)"</li>
+                            <li>najlepiej używać &amp;lt; i tympodobnych. Dla wygody można użyć
+                                <a href="https://mothereff.in/html-entities">konwertera</a> lub
+                                <a
+                                    href="https://marketplace.visualstudio.com/items?itemName=christopherstyles.html-entities">wtyczki</a>
+                                <br>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- START OF WEEEK -->
+        <section id="week3" class="anchorOffset">
+            <h2>Tydzień 3:</h2>
+            <article>
+                <h3>Kanban & Trello</h3>
+                <p>Miałem wcześniej do czynienia z tym narzędziem pod kątem organizacji zadań długoterminowo.<br>
+                    Pierwszy raz używam go do monitorowania postępów w małych zadaniach.</p>
+            </article>
+
+            <article>
+                <h3>&lt;b&gt; vs &lt;strong&gt; vs &lt;i&gt; vs &lt;em&gt;</h3>
+                <p>Do tej pory moja wiedza kończyłą się na "oba pogrubiają" oraz "oba pochylają".
+                    Dopiero w trakcie szkolenia (w dużej części nastawionego na semantykę) poznałem różnicę tj:<br>
+                </p>
+                <ul class="green-text">
+                    <li>&lt;b&gt; oraz &lt;i&gt; to znaczniki wykorzystywane wyłącznie do ozdabiania tekstu
+                        (zmiany jego wyglądu)</li>
+                    <li>&lt;strong&gt; oraz &lt;em&gt; to znaczniki semantyczne, strong podkreśla istotność
+                        wyrażenia, em sugeruje, że zwrot może być metaforą/ironią.</li>
+                </ul>
+
+            </article>
+
+            <article>
+                <h3>Przewijanie do danego elementu</h3>
+                <p>Kiedyś używałem, później przestałem, ostatecznie zapomniałem, a teraz mi przypomniano =)<br>
+                    Aby przewinąć stronę należy w odnośniku wpiać &lt;a href=&quot;#ID&quot;&gt;Widoczny
+                    Teskt&lt;/a&gt;<br>
+
+                    <br>Istniał jednak jeden problem przy używaniu elementów ustawionych jako position: sticky. (Po
+                    przesunieciu elementy były zasłonięte)
+                    Jednym z obejść problemu było dodanie:
+                </p>
+                <div class="code">
+                    [ID]::before {<br>
+                    &emsp;content: '';<br>
+                    &emsp;display: block;<br>
+                    &emsp;height: 50px;<br>
+                    &emsp;margin-top: -50px;<br>
+                    &emsp;visibility: hidden;<br>
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h3>Specyficzność stylów</h3>
+                <p>Ogólna zasada brzmiąca "style o większej specyficzności mają priorytet" oraz "ze stylów o równej
+                    specyficzności priorytet ma ten dodany później"<br>
+                    Znałem już wcześniej. I nawet mniej-więcej potrafiłem wyczuć które odwołanie jest bardziej
+                    specyficzne.
+
+                    Niemniej, są przypadki, które interpretowałbym inaczej. W ramach szkolenia dopiero poznałem
+                    właściwą metodę liczenia tej specyficzności (porównywalna do medali).<br>
+                    <img class="specifity-image" src="images/specificity.png" alt="How calculate specificity?"
+                        height=150 />
+
+                </p>
+            </article>
+
+            <article>
+                <h3>Nadawanie nazw</h3>
+                <p>Zalecana metoda nadawania nazw to używanie pojedynczych słów (a gdy to niemożliwe to kebab-case).
+                    <br>Nazwy klas powinny opisywać funkcje elementu na stronę.
+                    <br>Nazwy klas powinny być w języku angielskim.
+                </p>
+            </article>
+
+            <article>
+                <h3>Odwołania do elementów w CSS</h3>
+                <ul>
+                    <li>Do elementów odwołujemy się podając ich nazwę. Na przykład:
+                        <ul>
+                            <li><span class="small-code">a {...</span> albo <span class="small-code">div {...</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Do klas odwołujemy się podając ich nazwę po kropce, Na przykład:
+                        <ul>
+                            <li><span class="small-code">.moja-klasa {...</span> albo <span
+                                    class="small-code">.small-code {...</span></li>
+                        </ul>
+                    </li>
+                    <li>Do ID odwołujemy się podając ich nazwę po #. Na przykład:
+                        <ul>
+                            <li><span class="small-code">#moje-id {...</span> albo <span class="small-code">#top
+                                    {...</span></li>
+                        </ul>
+                    </li>
+                    <li>Do elementu X będącego potomkiem elementu Y odwołujemy się oddzielając nazwy spacją:
+                        <ul>
+                            <li><span class="small-code">Y X {...</span> albo <span class="small-code">main article
+                                    {...</span></li>
+                        </ul>
+                    </li>
+                    <li>Do elementu o nazwie X zawierającego klasę Y odwołujemy się pisząc nazwę elemntu i klasę po
+                        kropce
+                        <ul>
+                            <li><span class="small-code">X.Y {...</span> albo <span
+                                    class="small-code">article.highlighted {...</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Pierwszy kontakt z JS</h3>
+                <p>Jako, że wcześniej nie używałem JS to wszystko jest tu dla mnie nowe.
+                    <br>Skropty dodajemy bezpośrednio przez zamknięciem znacznika body wewnątrz tagu
+                    <br><span class="small-code">&lt;script&gt;&lt;/script&gt;</span>
+                    <br>Można też odwołać się do zewnętrznego pliku z kodem JS poprzez:
+                    <br><span class="small-code">&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;</span>
+                </p>
+                <p>
+                    <br>Podobnie jak w każdym języku programowania, występują tu zmienne i stałe.<br>
+                    <br>Zmienne tworzymy przez polecenie
+                    <br><span class="small-code">let name = 'value'</span>
+                    <br>Stałe tworzymy przez polecenie
+                    <br><span class="small-code">const name = 'value'</span>
+                </p>
+                <p>
+                    <br>Pierwsze instrukcje poznane w ramach szkolenia to alert oraz console log<br>
+                    <br>► alert (powiadomienie-popup w przeglądarce) wywołujemy tak:
+                    <br><span class="small-code">alert('value')</span>
+                    <br>► console log (komunikat widoczny w konsoli dostępnej pod F12) wywołujemy tak:
+                    <br><span class="small-code">console.log('value')</span>
+                </p>
+            </article>
+        </section>
+
+    </main>
+</body>
+
+</html>
