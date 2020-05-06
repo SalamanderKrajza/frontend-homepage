@@ -70,6 +70,30 @@
             Kiedy tworzyłem swoje pierwsze strony nie używałem ich. Miałem
             okazję je później poznać, ale dopiero wyrabiam nawyk ich używania.
           </p>
+          <ul>
+            <li>
+              Artykuł powinien opakowywać taką treść, która wykopiowana ze
+              strony sama w sobie (bez niczego zzewnątrz) powinna być
+              pojedynczą, zrozumiałą i samodzielną treścią
+            </li>
+            <li>
+              Sekcja może zawierać albo wiele artykułów, albo być wydzieloną
+              częścią artykułu. Nie musi być zrozumiała samodzielnie. Służy
+              raczej do grupowania treści
+            </li>
+            <li>
+              Zarówno sekcje i artykuły powinny zaczynać się od nagłówków
+            </li>
+            <li>
+              Poziom nagłówka powinien odpowiadać poziomowi zagnieżdżenia
+              (liczymy tylko semantyczne znaczniki section/article, divy nic nie
+              zmieniają)
+            </li>
+            <li>
+              Poza znacznikami MAIN raczej nie powinniśmy mieć sekcji ani
+              artykułów oraz znaczników Hx
+            </li>
+          </ul>
         </article>
 
         <article>
@@ -201,7 +225,7 @@
             medali).
           </p>
           <img
-            class="specifity-image"
+            class="notes-image"
             src="images/specificity.png"
             alt="How calculate specificity?"
             height="150"
@@ -308,6 +332,14 @@
               Stałe tworzymy przez polecenie <br />
               <span class="small-code">const name = 'value'</span>
             </p>
+            <p>
+              Aby wykorzystać zmienną w ramach jakiegoś stringa należy opakować
+              treść w ` (znaczek pod ~), a wewnątrz polecenia podać
+              $(nazwazmiennej), np:<br />
+              <span class="small-code"
+                >SomeComand(`Some string $(some-variable)`)</span
+              >
+            </p>
           </section>
           <section>
             <h4>Komunikaty w JS</h4>
@@ -325,6 +357,159 @@
               <span class="small-code">console.log('value')</span>
             </p>
           </section>
+        </article>
+      </section>
+
+      <!-- START OF WEEEK -->
+      <section id="week4" class="anchorOffset">
+        <h2>Tydzień 4:</h2>
+        <article>
+          <h3>box-sizing</h3>
+          <p>
+            Raczej przypomnienie niż coś nowego; Domyślnie jak definiujemy
+            wymiary jakiegoś elementu to definiujemy rozmiary wyłącznie treści.
+            Do ostatecznych wymiarów elementu trzeba dodatkowo dodać padding
+            oraz border.
+          </p>
+          <p>
+            Można zmodyfikować sposób nadawania width/height (tak, aby ten
+            wymiar opisywał treść elementu WRAZ Z paddingiem i borderem poprzez
+            zmianę parametru box-sizing:<br />
+            <span class="small-code">box-sizing: border-box;</span>
+          </p>
+        </article>
+
+        <article>
+          <h3>position: sticky;</h3>
+          <p>
+            Samo position: sticky; było mi znane już dawno. W ramach kursu
+            dowiedziałem się natomiast dwóch rzeczy:
+          </p>
+          <ul>
+            <li>
+              Parent elementu z ustawionym position: sticky nie może mieć
+              ustawionego overflow (albo nie będzie to działać)
+            </li>
+            <li>
+              Polecenie "sticky"
+              <strong>przykleja elementy WYŁĄCZNIE do końca parenta</strong>
+              (czyli jeżeli nadamy to dla jakiejś sekcji, do gdy skończymy
+              scrollować sekcję to element się odklei
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>position: relative/absolute;</h3>
+          <p>
+            Kolejne przypomnienie: position ABSOLUTE ustawia element względem
+            najbliższego przodka z parametrem RELATIVE
+          </p>
+        </article>
+
+        <article>
+          <h3>float: left/right oraz clear/overflow</h3>
+          <p>
+            Korzystając z polecenia "flow" można sprawić, że element z tym
+            parametrem jest opływany przez tekst z określonej strony.
+          </p>
+          <p>
+            Istnieje jednak haczyk - w momencie, gdy element opływający jest
+            krótszy od elementu opływanego - ten zewnętrzny pojemnyk nie jest
+            rozciągany do wysokości elementu z parametrem float.
+          </p>
+          <p>
+            Przykład takiej sytuacji: żółty prostokąt po lewej ma ustawione
+            float: right. Div w którym się znajduje ma białe tło. Tło nie jest
+            rozciągane:
+          </p>
+          <img
+            src="/images/flow.jpg"
+            alt="Printscreen with example of flow property problem"
+            class="notes-image"
+          />
+          <p>
+            Rozwiązaniem takiego problemu może być ustawienie parametru clear
+            dla jakiegoś obiektu (choćby pustego diva) w tym samym
+            kontenerze:<br />
+            <span class="small-code">clear: left/right</span>
+          </p>
+          <p>
+            Inne rozwiązanie to ustawienie OVERFLOW dla kontenera w którym
+            element z flow się znajduje<br />
+            <span class="small-code">overflow: hidden</span><br />
+            UWAGA! Przy takim rozwiązaniu, o ile kontener ma z góry narzuconą
+            wysokość to element z parametrem FLOW będzie ucinany.
+          </p>
+        </article>
+
+        <article>
+          <h3>JavaScript - typy</h3>
+          <p>
+            Podobnie jak w pythonie - typów zmiennych w JS nie musimy deklarować
+            (są przypisywane automatycznie w zależności od danych)<br />
+            Można sprawdzić typ zmiennej przez polecenie <br />
+            <span class="small-code">typeof NazwaZmiennej</span>
+          </p>
+        </article>
+
+        <article>
+          <h3>JavaScript - przypisanie zmiennej do zmiennej</h3>
+          <p>
+            W sytuacji, w której mamy zdefiniowaną zmienną X<br />
+            <span class="small-code">let x = 10</span>
+          </p>
+          <p>
+            I zdefiniujemy nową zmienną Y równą X<br />
+            <span class="small-code">let y = x</span>
+          </p>
+          <p>
+            To do zmiennej Y jest kopiowany wynik zmiennej X. To znaczy obie
+            zmienne wskazują ten sam wynik. Y nie wskazuje na X. Dlatego też
+            zmiana X nie zmodyfikuje Y. Tzn. po poleceniu:<br />
+            <span class="small-code">x = 5</span><br />
+            wynik Y dalej będzie = 10
+          </p>
+        </article>
+
+        <article>
+          <h3>
+            JavaScript - uzyskanie wyniku jakiegoś elementu na bieżącej stronie
+          </h3>
+          <p>
+            W JS można otrzymać cały kod elementu (wraz z wszystkimi jego
+            potomkami) poprzez polecenie:<br />
+            <span class="small-code"
+              >document.querySelectir('.nazwaKlasy/#nazwaId/nazwaElementu')</span
+            >
+          </p>
+          <p>
+            To samo można było osiągnąc w jQuerry poprzez<br />
+            <span class="small-code">$('.nazwaKlasy')</span>
+          </p>
+          <p>
+            Na potrzeby odniesienia się do elementu w ramach JS, przy stosowaniu
+            nazw zgodnych z BEM takie klasy powinny mieć modifier --js np:<br />
+            <span class="small-code">article__header--js</span>
+          </p>
+          <p>
+            Możemy nadpisywać zawartość elementu po przechwyceniu selectora<br />
+            <span class="small-code">
+              myTitle = document.querySelector('.title1')<br />
+              myTitle.innerHTML = "Salamander Krajza"
+            </span>
+          </p>
+        </article>
+
+        <article>
+          <h3>Różnica między DOM a HTML</h3>
+          <p>
+            HTML mamy w plikach czy w edytorze. Jest to kod który piszemy na
+            podstawie którego generowana jest nasza strona. <br />DOM to finalny
+            wynik wyświetlany w przeglądarce. Źródło strony (napisane w HTML)
+            może być zmodyfikowane np. przez skrypty JS. Dopiero to co widzimy
+            finalnie w przeglądarce to DOM
+          </p>
         </article>
       </section>
     </main>
