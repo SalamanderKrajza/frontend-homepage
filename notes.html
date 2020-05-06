@@ -8,18 +8,16 @@
   </head>
 
   <body>
-    <section class="top">
-      <header>
-        <span class="title1">Aleksander Krysa </span>
-        <span class="title2">"błądząc w krainie frontendu" </span>
-        <span class="description1">notatki ze szkolenia </span>
-        <a href="https://cotenfrontend.pl/">
-          <span class="description2">WTF </span>
-          <span class="description3">co ten </span>
-          <span class="description4">frontend</span>
-        </a>
-      </header>
-    </section>
+    <header class="top">
+      <span class="title1">Aleksander Krysa </span>
+      <span class="title2">"błądząc w krainie frontendu" </span>
+      <span class="description1">notatki ze szkolenia </span>
+      <a href="https://cotenfrontend.pl/">
+        <span class="description2">WTF </span>
+        <span class="description3">co ten </span>
+        <span class="description4">frontend</span>
+      </a>
+    </header>
 
     <nav>
       <ul>
@@ -170,11 +168,12 @@
             Kiedyś używałem, później przestałem, ostatecznie zapomniałem, a
             teraz mi przypomniano =)<br />
             Aby przewinąć stronę należy w odnośniku wpiać &lt;a
-            href=&quot;#ID&quot;&gt;Widoczny Teskt&lt;/a&gt;<br />
-
-            <br />Istniał jednak jeden problem przy używaniu elementów
-            ustawionych jako position: sticky. (Po przesunieciu elementy były
-            zasłonięte) Jednym z obejść problemu było dodanie:
+            href=&quot;#ID&quot;&gt;Widoczny Teskt&lt;/a&gt;
+          </p>
+          <p>
+            Istniał jednak jeden problem przy używaniu elementów ustawionych
+            jako position: sticky. (Po przesunieciu elementy były zasłonięte)
+            Jednym z obejść problemu było dodanie:
           </p>
           <div class="code">
             [ID]::before {<br />
@@ -192,29 +191,33 @@
           <p>
             Ogólna zasada brzmiąca "style o większej specyficzności mają
             priorytet" oraz "ze stylów o równej specyficzności priorytet ma ten
-            dodany później"<br />
+            dodany później"
+          </p>
+          <p>
             Znałem już wcześniej. I nawet mniej-więcej potrafiłem wyczuć które
             odwołanie jest bardziej specyficzne. Niemniej, są przypadki, które
             interpretowałbym inaczej. W ramach szkolenia dopiero poznałem
             właściwą metodę liczenia tej specyficzności (porównywalna do
-            medali).<br />
-            <img
-              class="specifity-image"
-              src="images/specificity.png"
-              alt="How calculate specificity?"
-              height="150"
-            />
+            medali).
           </p>
+          <img
+            class="specifity-image"
+            src="images/specificity.png"
+            alt="How calculate specificity?"
+            height="150"
+          />
         </article>
 
         <article>
           <h3>Nadawanie nazw</h3>
-          <p>
-            Zalecana metoda nadawania nazw to używanie pojedynczych słów (a gdy
-            to niemożliwe to kebab-case). <br />Nazwy klas powinny opisywać
-            funkcje elementu na stronę. <br />Nazwy klas powinny być w języku
-            angielskim.
-          </p>
+          <ul>
+            <li>
+              Zalecana metoda nadawania nazw to używanie pojedynczych słów (a
+              gdy to niemożliwe to kebab-case).
+            </li>
+            <li>Nazwy klas powinny opisywać funkcje elementu na stronę.</li>
+            <li>Nazwy klas powinny być w języku angielskim.</li>
+          </ul>
         </article>
 
         <article>
@@ -274,37 +277,56 @@
           <h3>Pierwszy kontakt z JS</h3>
           <p>
             Jako, że wcześniej nie używałem JS to wszystko jest tu dla mnie
-            nowe. <br />Skropty dodajemy bezpośrednio przez zamknięciem
-            znacznika body wewnątrz tagu <br /><span class="small-code"
-              >&lt;script&gt;&lt;/script&gt;</span
-            >
-            <br />Można też odwołać się do zewnętrznego pliku z kodem JS
-            poprzez: <br /><span class="small-code"
-              >&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;</span
-            >
+            nowe.
           </p>
-          <p>
-            <br />Podobnie jak w każdym języku programowania, występują tu
-            zmienne i stałe.<br />
-            <br />Zmienne tworzymy przez polecenie <br /><span
-              class="small-code"
-              >let name = 'value'</span
-            >
-            <br />Stałe tworzymy przez polecenie <br /><span class="small-code"
-              >const name = 'value'</span
-            >
-          </p>
-          <p>
-            <br />Pierwsze instrukcje poznane w ramach szkolenia to alert oraz
-            console log<br />
-            <br />► alert (powiadomienie-popup w przeglądarce) wywołujemy tak:
-            <br /><span class="small-code">alert('value')</span> <br />► console
-            log (komunikat widoczny w konsoli dostępnej pod F12) wywołujemy tak:
-            <br /><span class="small-code">console.log('value')</span>
-          </p>
+          <section>
+            <h4>Dodawanie skryptów</h4>
+            <p>
+              Skrypty dodajemy bezpośrednio przez zamknięciem znacznika body
+              wewnątrz tagu <br />
+              <span class="small-code">&lt;script&gt;&lt;/script&gt;</span>
+            </p>
+            <p>
+              Można też odwołać się do zewnętrznego pliku z kodem JS poprzez:
+              <br />
+              <span class="small-code">
+                &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+              </span>
+            </p>
+          </section>
+          <section>
+            <h4>Zmienne i stałe</h4>
+            <p>
+              Podobnie jak w każdym języku programowania, występują tu zmienne i
+              stałe.
+            </p>
+            <p>
+              Zmienne tworzymy przez polecenie <br />
+              <span class="small-code">let name = 'value'</span>
+            </p>
+            <p>
+              Stałe tworzymy przez polecenie <br />
+              <span class="small-code">const name = 'value'</span>
+            </p>
+          </section>
+          <section>
+            <h4>Komunikaty w JS</h4>
+            <p>
+              Pierwsze instrukcje poznane w ramach szkolenia to alert oraz
+              console log
+            </p>
+            <p>
+              Alert (powiadomienie-popup w przeglądarce) wywołujemy tak:<br />
+              <span class="small-code">alert('value')</span>
+            </p>
+            <p>
+              Console log (komunikat widoczny w konsoli dostępnej pod F12)
+              wywołujemy tak: <br />
+              <span class="small-code">console.log('value')</span>
+            </p>
+          </section>
         </article>
       </section>
-      
     </main>
   </body>
 </html>
