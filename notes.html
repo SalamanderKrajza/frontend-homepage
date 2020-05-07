@@ -7,7 +7,7 @@
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body>
+  <body class="body">
     <header class="hero heading" id="hero">
       <span class="hero__title1">Aleksander Krysa </span>
       <span class="hero__title2">"błądząc w krainie frontendu" </span>
@@ -28,7 +28,7 @@
       </ul>
     </nav>
 
-    <main>
+    <main class="main">
       <header>
         <h1 class="heading">Jakich rzeczy udało mi się dowiedzieć?</h1>
       </header>
@@ -52,7 +52,7 @@
       <!-- START OF WEEEK -->
       <section id="week1" class="anchorOffset">
         <h2 class="heading">Tydzień 1:</h2>
-        <article>
+        <article class="article">
           <h3 class="heading">Absolutnie niczego</h3>
           <p>
             Choć to raczej nic dziwnego, z racji, że był to tydzień czysto
@@ -64,7 +64,7 @@
       <!-- START OF WEEEK -->
       <section id="week2" class="anchorOffset">
         <h2 class="heading">Tydzień 2:</h2>
-        <article>
+        <article class="article">
           <h3 class="heading">Znaczniki &lt;main&gt;&lt;section&gt;&lt;article&gt;</h3>
           <p>
             Kiedy tworzyłem swoje pierwsze strony nie używałem ich. Miałem
@@ -96,7 +96,7 @@
           </ul>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">Validator kodu</h3>
           <p>
             Dostępnego pod
@@ -106,7 +106,7 @@
           </p>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">Kończenie szkieletu strony przez ! + TAB</h3>
           <p>
             Wcześniej nie używałem VSC do pisania stron więc nie znam jeszcze
@@ -117,7 +117,7 @@
           </p>
         </article>
 
-        <article class="red-border">
+        <article class="article--red">
           <h3 class="heading">Dodatkowe pytania:</h3>
           <ul>
             <li>
@@ -125,7 +125,7 @@
               informacji na slajdach, można go użyć zarówno do main, section
               oraz article, jednak w szkoleniu nie został wykorzystany przy
               artykułach. Dlaczego?
-              <ul class="green-text">
+              <ul class="article__list--green">
                 <li>
                   Header kiedy mamy bardziej złożony nagłówek niż tylko h1-6
                 </li>
@@ -135,7 +135,7 @@
               Jaka jest poprawna forma wypisywania tagów HTML jako kodu? Tag
               "XMP" którego użyłem? Zastąpienie &lt; przez &amp;lt; oraz &gt;
               przez &amp;gt;? Jeszcze coś innego?
-              <ul class="green-text">
+              <ul class="article__list--green">
                 <li>"xmp to prehistoria :)"</li>
                 <li>
                   najlepiej używać &amp;lt; i tympodobnych. Dla wygody można
@@ -157,7 +157,7 @@
       <!-- START OF WEEEK -->
       <section id="week3" class="anchorOffset">
         <h2 class="heading">Tydzień 3:</h2>
-        <article>
+        <article class="article">
           <h3 class="heading">Kanban & Trello</h3>
           <p>
             Miałem wcześniej do czynienia z tym narzędziem pod kątem organizacji
@@ -166,14 +166,14 @@
           </p>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">&lt;b&gt; vs &lt;strong&gt; vs &lt;i&gt; vs &lt;em&gt;</h3>
           <p>
             Do tej pory moja wiedza kończyłą się na "oba pogrubiają" oraz "oba
             pochylają". Dopiero w trakcie szkolenia (w dużej części nastawionego
             na semantykę) poznałem różnicę tj:<br />
           </p>
-          <ul class="green-text">
+          <ul class="article__list--green">
             <li>
               &lt;b&gt; oraz &lt;i&gt; to znaczniki wykorzystywane wyłącznie do
               ozdabiania tekstu (zmiany jego wyglądu)
@@ -186,7 +186,7 @@
           </ul>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">Przewijanie do danego elementu</h3>
           <p>
             Kiedyś używałem, później przestałem, ostatecznie zapomniałem, a
@@ -199,7 +199,7 @@
             jako position: sticky. (Po przesunieciu elementy były zasłonięte)
             Jednym z obejść problemu było dodanie:
           </p>
-          <div class="code">
+          <div class="article__code">
             [ID]::before {<br />
             &emsp;content: '';<br />
             &emsp;display: block;<br />
@@ -210,7 +210,7 @@
           </div>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">Specyficzność stylów</h3>
           <p>
             Ogólna zasada brzmiąca "style o większej specyficzności mają
@@ -225,14 +225,14 @@
             medali).
           </p>
           <img
-            class="notes-image"
+            class="article__image"
             src="images/specificity.png"
             alt="How calculate specificity?"
             height="150"
           />
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">Nadawanie nazw</h3>
           <ul>
             <li>
@@ -244,15 +244,15 @@
           </ul>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">Odwołania do elementów w CSS</h3>
           <ul>
             <li>
               Do elementów odwołujemy się podając ich nazwę. Na przykład:
               <ul>
                 <li>
-                  <span class="small-code">a {...</span> albo
-                  <span class="small-code">div {...</span>
+                  <span class="article__small-code">a {...</span> albo
+                  <span class="article__small-code">div {...</span>
                 </li>
               </ul>
             </li>
@@ -260,8 +260,8 @@
               Do klas odwołujemy się podając ich nazwę po kropce, Na przykład:
               <ul>
                 <li>
-                  <span class="small-code">.moja-klasa {...</span> albo
-                  <span class="small-code">.small-code {...</span>
+                  <span class="article__small-code">.moja-klasa {...</span> albo
+                  <span class="article__small-code">.small-code {...</span>
                 </li>
               </ul>
             </li>
@@ -269,8 +269,8 @@
               Do ID odwołujemy się podając ich nazwę po #. Na przykład:
               <ul>
                 <li>
-                  <span class="small-code">#moje-id {...</span> albo
-                  <span class="small-code">#top {...</span>
+                  <span class="article__small-code">#moje-id {...</span> albo
+                  <span class="article__small-code">#top {...</span>
                 </li>
               </ul>
             </li>
@@ -279,8 +279,8 @@
               oddzielając nazwy spacją:
               <ul>
                 <li>
-                  <span class="small-code">Y X {...</span> albo
-                  <span class="small-code">main article {...</span>
+                  <span class="article__small-code">Y X {...</span> albo
+                  <span class="article__small-code">main article {...</span>
                 </li>
               </ul>
             </li>
@@ -289,72 +289,72 @@
               nazwę elemntu i klasę po kropce
               <ul>
                 <li>
-                  <span class="small-code">X.Y {...</span> albo
-                  <span class="small-code">article.highlighted {...</span>
+                  <span class="article__small-code">X.Y {...</span> albo
+                  <span class="article__small-code">article.highlighted {...</span>
                 </li>
               </ul>
             </li>
           </ul>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">Pierwszy kontakt z JS</h3>
           <p>
             Jako, że wcześniej nie używałem JS to wszystko jest tu dla mnie
             nowe.
           </p>
-          <section>
-            <h4 class="heading">Dodawanie skryptów</h4>
+          <section class="article__subsection">
+            <h4 class="article__subsection__heading">Dodawanie skryptów</h4>
             <p>
               Skrypty dodajemy bezpośrednio przez zamknięciem znacznika body
               wewnątrz tagu <br />
-              <span class="small-code">&lt;script&gt;&lt;/script&gt;</span>
+              <span class="article__small-code">&lt;script&gt;&lt;/script&gt;</span>
             </p>
             <p>
               Można też odwołać się do zewnętrznego pliku z kodem JS poprzez:
               <br />
-              <span class="small-code">
+              <span class="article__small-code">
                 &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
               </span>
             </p>
           </section>
           <section>
-            <h4 class="heading">Zmienne i stałe</h4>
+            <h4 class="article__subsection__heading">Zmienne i stałe</h4>
             <p>
               Podobnie jak w każdym języku programowania, występują tu zmienne i
               stałe.
             </p>
             <p>
               Zmienne tworzymy przez polecenie <br />
-              <span class="small-code">let name = 'value'</span>
+              <span class="article__small-code">let name = 'value'</span>
             </p>
             <p>
               Stałe tworzymy przez polecenie <br />
-              <span class="small-code">const name = 'value'</span>
+              <span class="article__small-code">const name = 'value'</span>
             </p>
             <p>
               Aby wykorzystać zmienną w ramach jakiegoś stringa należy opakować
               treść w ` (znaczek pod ~), a wewnątrz polecenia podać
               $(nazwazmiennej), np:<br />
-              <span class="small-code"
+              <span class="article__small-code"
                 >SomeComand(`Some string $(some-variable)`)</span
               >
             </p>
           </section>
           <section>
-            <h4 class="heading">Komunikaty w JS</h4>
+            <h4 class="article__subsection__heading">Komunikaty w JS</h4>
             <p>
               Pierwsze instrukcje poznane w ramach szkolenia to alert oraz
               console log
             </p>
             <p>
               Alert (powiadomienie-popup w przeglądarce) wywołujemy tak:<br />
-              <span class="small-code">alert('value')</span>
+              <span class="article__small-code">alert('value')</span>
             </p>
             <p>
               Console log (komunikat widoczny w konsoli dostępnej pod F12)
               wywołujemy tak: <br />
-              <span class="small-code">console.log('value')</span>
+              <span class="article__small-code">console.log('value')</span>
             </p>
           </section>
         </article>
@@ -363,7 +363,7 @@
       <!-- START OF WEEEK -->
       <section id="week4" class="anchorOffset">
         <h2 class="heading">Tydzień 4:</h2>
-        <article>
+        <article class="article">
           <h3 class="heading">box-sizing</h3>
           <p>
             Raczej przypomnienie niż coś nowego; Domyślnie jak definiujemy
@@ -375,11 +375,11 @@
             Można zmodyfikować sposób nadawania width/height (tak, aby ten
             wymiar opisywał treść elementu WRAZ Z paddingiem i borderem poprzez
             zmianę parametru box-sizing:<br />
-            <span class="small-code">box-sizing: border-box;</span>
+            <span class="article__small-code">box-sizing: border-box;</span>
           </p>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">position: sticky;</h3>
           <p>
             Samo position: sticky; było mi znane już dawno. W ramach kursu
@@ -399,7 +399,7 @@
           </ul>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">position: relative/absolute;</h3>
           <p>
             Kolejne przypomnienie: position ABSOLUTE ustawia element względem
@@ -407,7 +407,7 @@
           </p>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">float: left/right oraz clear/overflow</h3>
           <p>
             Korzystając z polecenia "flow" można sprawić, że element z tym
@@ -426,82 +426,82 @@
           <img
             src="/images/flow.jpg"
             alt="Printscreen with example of flow property problem"
-            class="notes-image"
+            class="article__image"
           />
           <p>
             Rozwiązaniem takiego problemu może być ustawienie parametru clear
             dla jakiegoś obiektu (choćby pustego diva) w tym samym
             kontenerze:<br />
-            <span class="small-code">clear: left/right</span>
+            <span class="article__small-code">clear: left/right</span>
           </p>
           <p>
             Inne rozwiązanie to ustawienie OVERFLOW dla kontenera w którym
             element z flow się znajduje<br />
-            <span class="small-code">overflow: hidden</span><br />
+            <span class="article__small-code">overflow: hidden</span><br />
             UWAGA! Przy takim rozwiązaniu, o ile kontener ma z góry narzuconą
             wysokość to element z parametrem FLOW będzie ucinany.
           </p>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">JavaScript - typy</h3>
           <p>
             Podobnie jak w pythonie - typów zmiennych w JS nie musimy deklarować
             (są przypisywane automatycznie w zależności od danych)<br />
             Można sprawdzić typ zmiennej przez polecenie <br />
-            <span class="small-code">typeof NazwaZmiennej</span>
+            <span class="article__small-code">typeof NazwaZmiennej</span>
           </p>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">JavaScript - przypisanie zmiennej do zmiennej</h3>
           <p>
             W sytuacji, w której mamy zdefiniowaną zmienną X<br />
-            <span class="small-code">let x = 10</span>
+            <span class="article__small-code">let x = 10</span>
           </p>
           <p>
             I zdefiniujemy nową zmienną Y równą X<br />
-            <span class="small-code">let y = x</span>
+            <span class="article__small-code">let y = x</span>
           </p>
           <p>
             To do zmiennej Y jest kopiowany wynik zmiennej X. To znaczy obie
             zmienne wskazują ten sam wynik. Y nie wskazuje na X. Dlatego też
             zmiana X nie zmodyfikuje Y. Tzn. po poleceniu:<br />
-            <span class="small-code">x = 5</span><br />
+            <span class="article__small-code">x = 5</span><br />
             wynik Y dalej będzie = 10
           </p>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">
             JavaScript - uzyskanie wyniku jakiegoś elementu na bieżącej stronie
           </h3>
           <p>
             W JS można otrzymać cały kod elementu (wraz z wszystkimi jego
             potomkami) poprzez polecenie:<br />
-            <span class="small-code"
+            <span class="article__small-code"
               >document.querySelectir('.nazwaKlasy/#nazwaId/nazwaElementu')</span
             >
           </p>
           <p>
             To samo można było osiągnąc w jQuerry poprzez<br />
-            <span class="small-code">$('.nazwaKlasy')</span>
+            <span class="article__small-code">$('.nazwaKlasy')</span>
           </p>
           <p>
             Na potrzeby odniesienia się do elementu w ramach JS, przy stosowaniu
             nazw zgodnych z BEM takie klasy powinny mieć modifier --js np:<br />
-            <span class="small-code">article__header--js</span>
+            <span class="article__small-code">article__header--js</span>
           </p>
           <p>
             Możemy nadpisywać zawartość elementu po przechwyceniu selectora<br />
-            <span class="small-code">
+            <span class="article__small-code">
               myTitle = document.querySelector('.title1')<br />
               myTitle.innerHTML = "Salamander Krajza"
             </span>
           </p>
         </article>
 
-        <article>
+        <article class="article">
           <h3 class="heading">Różnica między DOM a HTML</h3>
           <p>
             HTML mamy w plikach czy w edytorze. Jest to kod który piszemy na

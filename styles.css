@@ -1,5 +1,5 @@
 /* -----------------------Base settings for every subpage----------------------- */
-body {
+.body {
   background-color: #f5f5f5;
   color: #4d2b36;
   font-family: Montserrat;
@@ -8,17 +8,14 @@ body {
 }
 
 .heading,
+.article__subsection__heading,
 .hero {
   color: #3f232c;
   font-variant: small-caps;
   font-weight: bold;
 }
 
-h4 {
-  margin-bottom: 15px;
-}
-
-main {
+.main {
   margin: auto 12%;
 }
 
@@ -140,22 +137,30 @@ main {
 }
 
 /* -----------------------Settings content (for every subpage)----------------------- */
-article {
+.article,
+.article--red
+ {
   border: 1px solid black;
   border-radius: 20px;
   margin: 5px 3%;
   padding: 0px 25px 5px 25px;
 }
-.red-border {
+
+.article--red {
   border-color: red;
   border-width: 3px;
 }
 
-.green-text {
+.article__subsection__heading {
+  margin-bottom: 15px;
+}
+
+
+.article__list--green {
   color: rgb(5, 83, 5);
 }
 
-.green-text li {
+.article__list--green li {
   margin: 5px 0px;
 }
 
@@ -180,7 +185,7 @@ article {
   visibility: hidden;
 }
 
-.code {
+.article__code {
   border: 1px solid black;
   border-radius: 10px;
   padding: 18px 40px;
@@ -190,7 +195,7 @@ article {
   letter-spacing: 1px;
 }
 
-.small-code {
+.article__small-code {
   border: 1px solid black;
   border-radius: 10px;
   padding: 9px 20px;
@@ -199,7 +204,7 @@ article {
   letter-spacing: 1px;
 }
 
-.notes-image {
+.article__image {
   border-radius: 20px;
   margin: 15px;
 }
