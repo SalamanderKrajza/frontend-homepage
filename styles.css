@@ -7,11 +7,8 @@ body {
   margin: 0px;
 }
 
-h1,
-h2,
-h3,
-h4,
-.top {
+.heading,
+.hero {
   color: #3f232c;
   font-variant: small-caps;
   font-weight: bold;
@@ -26,22 +23,24 @@ main {
 }
 
 /* -----------------------Settings for TOP image/text/link----------------------- */
-.top {
+.hero {
   background-image: url("images/top.jpg");
   margin: 0;
   min-height: 500px;
   position: relative;
 }
 
-.top * {
-  margin: 0px; /* needed or h1 tag adding some space vertically */
+/* .hero span <- Previous version (replaced by 6 lines below) */
+.hero__title1,
+.hero__title2,
+.hero__description1,
+.hero__description2,
+.hero__description3,
+.hero__description4 {
+  white-space: pre; /* needed to cause hading to copy correctly */
 }
 
-.top span {
-  white-space: pre;
-}
-
-.title1 {
+.hero__title1 {
   position: absolute;
   bottom: 257px;
   left: 382px;
@@ -50,7 +49,7 @@ main {
   text-shadow: 3px 3px #235950;
 }
 
-.title2 {
+.hero__title2 {
   position: absolute;
   bottom: 229px;
   left: 382px;
@@ -59,15 +58,15 @@ main {
   letter-spacing: 0px;
 }
 
-.top a span {
+.hero__link span {
   color: #f9c802;
 }
 
-.top a:hover span {
+.hero__link:hover span {
   color: yellow;
 }
 
-.description1 {
+.hero__description1 {
   position: absolute;
   bottom: 172px;
   left: 382px;
@@ -77,7 +76,7 @@ main {
   letter-spacing: 1px;
 }
 
-.description2 {
+.hero__description2 {
   position: absolute;
   bottom: 48px;
   left: 382px;
@@ -86,7 +85,7 @@ main {
   letter-spacing: 1px;
 }
 
-.description3 {
+.hero__description3 {
   position: absolute;
   bottom: 111px;
   left: 680px;
@@ -96,7 +95,7 @@ main {
   transform: scaleX(0.8);
 }
 
-.description4 {
+.hero__description4 {
   position: absolute;
   bottom: 65px;
   left: 673px;
@@ -107,7 +106,7 @@ main {
 }
 
 /* -----------------------Settings for navigation----------------------- */
-nav {
+.navigation {
   background-color: #f5f5f599;
   backdrop-filter: blur(6px);
   border: 1px solid #3f232c;
@@ -120,22 +119,22 @@ nav {
   top: 0px;
 }
 
-nav ul {
+.navigation__list {
   list-style: none;
 }
 
-nav li {
+.navigation__list li {
   float: right;
 }
 
-nav a {
+.navigation__list__link {
   padding: 8px;
   color: #3f232c;
   text-decoration: none;
   padding: 10px 20px;
 }
 
-nav a:hover {
+.navigation__list__link:hover {
   color: #e66b76;
   border-radius: 20px;
 }

@@ -8,29 +8,29 @@
   </head>
 
   <body>
-    <header class="top">
-      <span class="title1">Aleksander Krysa </span>
-      <span class="title2">"błądząc w krainie frontendu" </span>
-      <span class="description1">notatki ze szkolenia </span>
-      <a href="https://cotenfrontend.pl/">
-        <span class="description2">WTF </span>
-        <span class="description3">co ten </span>
-        <span class="description4">frontend</span>
+    <header class="hero heading" id="hero">
+      <span class="hero__title1">Aleksander Krysa </span>
+      <span class="hero__title2">"błądząc w krainie frontendu" </span>
+      <span class="hero__description1">notatki ze szkolenia </span>
+      <a class="hero__link" href="https://cotenfrontend.pl/">
+        <span class="hero__description2">WTF </span>
+        <span class="hero__description3">co ten </span>
+        <span class="hero__description4">frontend</span>
       </a>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#top" class="up">↑ Powrót na górę ↑</a></li>
-        <li><a href="library.html">Przydatne materiały</a></li>
-        <li><a href="notes.html">Notatki z tygodni</a></li>
-        <li><a href="index.html">O stronie</a></li>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li><a href="#top" class="navigation__list__link">↑ Powrót na górę ↑</a></li>
+        <li><a href="library.html" class="navigation__list__link">Przydatne materiały</a></li>
+        <li><a href="notes.html" class="navigation__list__link">Notatki z tygodni</a></li>
+        <li><a href="index.html" class="navigation__list__link">O stronie</a></li>
       </ul>
     </nav>
 
     <main>
       <header>
-        <h1>Jakich rzeczy udało mi się dowiedzieć?</h1>
+        <h1 class="heading">Jakich rzeczy udało mi się dowiedzieć?</h1>
       </header>
 
       <ul class="horizontal-list">
@@ -51,9 +51,9 @@
 
       <!-- START OF WEEEK -->
       <section id="week1" class="anchorOffset">
-        <h2>Tydzień 1:</h2>
+        <h2 class="heading">Tydzień 1:</h2>
         <article>
-          <h3>Absolutnie niczego</h3>
+          <h3 class="heading">Absolutnie niczego</h3>
           <p>
             Choć to raczej nic dziwnego, z racji, że był to tydzień czysto
             organizacyjny.
@@ -63,9 +63,9 @@
 
       <!-- START OF WEEEK -->
       <section id="week2" class="anchorOffset">
-        <h2>Tydzień 2:</h2>
+        <h2 class="heading">Tydzień 2:</h2>
         <article>
-          <h3>Znaczniki &lt;main&gt;&lt;section&gt;&lt;article&gt;</h3>
+          <h3 class="heading">Znaczniki &lt;main&gt;&lt;section&gt;&lt;article&gt;</h3>
           <p>
             Kiedy tworzyłem swoje pierwsze strony nie używałem ich. Miałem
             okazję je później poznać, ale dopiero wyrabiam nawyk ich używania.
@@ -97,7 +97,7 @@
         </article>
 
         <article>
-          <h3>Validator kodu</h3>
+          <h3 class="heading">Validator kodu</h3>
           <p>
             Dostępnego pod
             <a href="https://validator.w3.org/nu/#textarea">tym adresem</a>
@@ -107,7 +107,7 @@
         </article>
 
         <article>
-          <h3>Kończenie szkieletu strony przez ! + TAB</h3>
+          <h3 class="heading">Kończenie szkieletu strony przez ! + TAB</h3>
           <p>
             Wcześniej nie używałem VSC do pisania stron więc nie znam jeszcze
             wszystkich jego funkcjonalności. Szkielet strony to fajne
@@ -118,7 +118,7 @@
         </article>
 
         <article class="red-border">
-          <h3>Dodatkowe pytania:</h3>
+          <h3 class="heading">Dodatkowe pytania:</h3>
           <ul>
             <li>
               Kiedy używamy znacznika &lt;header&gt; a kiedy nie? Według
@@ -156,9 +156,9 @@
 
       <!-- START OF WEEEK -->
       <section id="week3" class="anchorOffset">
-        <h2>Tydzień 3:</h2>
+        <h2 class="heading">Tydzień 3:</h2>
         <article>
-          <h3>Kanban & Trello</h3>
+          <h3 class="heading">Kanban & Trello</h3>
           <p>
             Miałem wcześniej do czynienia z tym narzędziem pod kątem organizacji
             zadań długoterminowo.<br />
@@ -167,7 +167,7 @@
         </article>
 
         <article>
-          <h3>&lt;b&gt; vs &lt;strong&gt; vs &lt;i&gt; vs &lt;em&gt;</h3>
+          <h3 class="heading">&lt;b&gt; vs &lt;strong&gt; vs &lt;i&gt; vs &lt;em&gt;</h3>
           <p>
             Do tej pory moja wiedza kończyłą się na "oba pogrubiają" oraz "oba
             pochylają". Dopiero w trakcie szkolenia (w dużej części nastawionego
@@ -187,7 +187,7 @@
         </article>
 
         <article>
-          <h3>Przewijanie do danego elementu</h3>
+          <h3 class="heading">Przewijanie do danego elementu</h3>
           <p>
             Kiedyś używałem, później przestałem, ostatecznie zapomniałem, a
             teraz mi przypomniano =)<br />
@@ -211,7 +211,7 @@
         </article>
 
         <article>
-          <h3>Specyficzność stylów</h3>
+          <h3 class="heading">Specyficzność stylów</h3>
           <p>
             Ogólna zasada brzmiąca "style o większej specyficzności mają
             priorytet" oraz "ze stylów o równej specyficzności priorytet ma ten
@@ -233,7 +233,7 @@
         </article>
 
         <article>
-          <h3>Nadawanie nazw</h3>
+          <h3 class="heading">Nadawanie nazw</h3>
           <ul>
             <li>
               Zalecana metoda nadawania nazw to używanie pojedynczych słów (a
@@ -245,7 +245,7 @@
         </article>
 
         <article>
-          <h3>Odwołania do elementów w CSS</h3>
+          <h3 class="heading">Odwołania do elementów w CSS</h3>
           <ul>
             <li>
               Do elementów odwołujemy się podając ich nazwę. Na przykład:
@@ -298,13 +298,13 @@
         </article>
 
         <article>
-          <h3>Pierwszy kontakt z JS</h3>
+          <h3 class="heading">Pierwszy kontakt z JS</h3>
           <p>
             Jako, że wcześniej nie używałem JS to wszystko jest tu dla mnie
             nowe.
           </p>
           <section>
-            <h4>Dodawanie skryptów</h4>
+            <h4 class="heading">Dodawanie skryptów</h4>
             <p>
               Skrypty dodajemy bezpośrednio przez zamknięciem znacznika body
               wewnątrz tagu <br />
@@ -319,7 +319,7 @@
             </p>
           </section>
           <section>
-            <h4>Zmienne i stałe</h4>
+            <h4 class="heading">Zmienne i stałe</h4>
             <p>
               Podobnie jak w każdym języku programowania, występują tu zmienne i
               stałe.
@@ -342,7 +342,7 @@
             </p>
           </section>
           <section>
-            <h4>Komunikaty w JS</h4>
+            <h4 class="heading">Komunikaty w JS</h4>
             <p>
               Pierwsze instrukcje poznane w ramach szkolenia to alert oraz
               console log
@@ -362,9 +362,9 @@
 
       <!-- START OF WEEEK -->
       <section id="week4" class="anchorOffset">
-        <h2>Tydzień 4:</h2>
+        <h2 class="heading">Tydzień 4:</h2>
         <article>
-          <h3>box-sizing</h3>
+          <h3 class="heading">box-sizing</h3>
           <p>
             Raczej przypomnienie niż coś nowego; Domyślnie jak definiujemy
             wymiary jakiegoś elementu to definiujemy rozmiary wyłącznie treści.
@@ -380,7 +380,7 @@
         </article>
 
         <article>
-          <h3>position: sticky;</h3>
+          <h3 class="heading">position: sticky;</h3>
           <p>
             Samo position: sticky; było mi znane już dawno. W ramach kursu
             dowiedziałem się natomiast dwóch rzeczy:
@@ -400,7 +400,7 @@
         </article>
 
         <article>
-          <h3>position: relative/absolute;</h3>
+          <h3 class="heading">position: relative/absolute;</h3>
           <p>
             Kolejne przypomnienie: position ABSOLUTE ustawia element względem
             najbliższego przodka z parametrem RELATIVE
@@ -408,7 +408,7 @@
         </article>
 
         <article>
-          <h3>float: left/right oraz clear/overflow</h3>
+          <h3 class="heading">float: left/right oraz clear/overflow</h3>
           <p>
             Korzystając z polecenia "flow" można sprawić, że element z tym
             parametrem jest opływany przez tekst z określonej strony.
@@ -444,7 +444,7 @@
         </article>
 
         <article>
-          <h3>JavaScript - typy</h3>
+          <h3 class="heading">JavaScript - typy</h3>
           <p>
             Podobnie jak w pythonie - typów zmiennych w JS nie musimy deklarować
             (są przypisywane automatycznie w zależności od danych)<br />
@@ -454,7 +454,7 @@
         </article>
 
         <article>
-          <h3>JavaScript - przypisanie zmiennej do zmiennej</h3>
+          <h3 class="heading">JavaScript - przypisanie zmiennej do zmiennej</h3>
           <p>
             W sytuacji, w której mamy zdefiniowaną zmienną X<br />
             <span class="small-code">let x = 10</span>
@@ -473,7 +473,7 @@
         </article>
 
         <article>
-          <h3>
+          <h3 class="heading">
             JavaScript - uzyskanie wyniku jakiegoś elementu na bieżącej stronie
           </h3>
           <p>
@@ -502,7 +502,7 @@
         </article>
 
         <article>
-          <h3>Różnica między DOM a HTML</h3>
+          <h3 class="heading">Różnica między DOM a HTML</h3>
           <p>
             HTML mamy w plikach czy w edytorze. Jest to kod który piszemy na
             podstawie którego generowana jest nasza strona. <br />DOM to finalny
