@@ -8,6 +8,7 @@
 }
 
 .heading,
+.week__heading,
 .article__subsection__heading,
 .hero {
   color: #3f232c;
@@ -16,7 +17,8 @@
 }
 
 .main {
-  margin: auto 12%;
+  margin: auto 12%;  /* Should be smaller if device width is small */
+  min-width: 1000px;
 }
 
 /* -----------------------Settings for TOP image/text/link----------------------- */
@@ -185,6 +187,11 @@
   visibility: hidden;
 }
 
+.week__heading{
+  position: sticky;
+  top: 10px;
+}
+
 .article__code {
   border: 1px solid black;
   border-radius: 10px;
@@ -208,3 +215,4 @@
   border-radius: 20px;
   margin: 15px;
 }
+
