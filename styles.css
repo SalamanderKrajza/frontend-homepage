@@ -7,8 +7,10 @@
   margin: 0px;
 }
 
-.heading,
+.main__heading,
 .week__heading,
+.section_heading,
+.article_heading,
 .article__subsection__heading,
 .hero {
   color: #3f232c;
