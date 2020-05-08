@@ -19,6 +19,7 @@
 .main {
   margin: auto 12%;  /* Should be smaller if device width is small */
   min-width: 1000px;
+  max-width: 1714px;
 }
 
 /* -----------------------Settings for TOP image/text/link----------------------- */
@@ -27,6 +28,7 @@
   margin: 0;
   min-height: 500px;
   position: relative;
+  background-repeat: no-repeat;
 }
 
 /* .hero span <- Previous version (replaced by 6 lines below) */
@@ -111,11 +113,14 @@
   border: 1px solid #3f232c;
   height: 50px;
   width: 100%;
+  max-width: 1714px;   /* temporary solution for bigger resolution */
   padding: 0px;
   margin: 0px;
   display: inline-block;
   position: sticky;
   top: 0px;
+  box-sizing: border-box;
+  z-index: 999;
 }
 
 .navigation__list {
