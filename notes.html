@@ -20,12 +20,10 @@
     </header>
 
     <nav class="navigation">
-      <ul class="navigation__list">
-        <li><a href="#top" class="navigation__list__link">↑ Powrót na górę ↑</a></li>
-        <li><a href="library.html" class="navigation__list__link">Przydatne materiały</a></li>
-        <li><a href="notes.html" class="navigation__list__link">Notatki z tygodni</a></li>
-        <li><a href="index.html" class="navigation__list__link">O stronie</a></li>
-      </ul>
+      <a href="#top" class="navigation__link">↑ Powrót na górę ↑</a>
+      <a href="library.html" class="navigation__link">Przydatne materiały</a>
+      <a href="notes.html" class="navigation__link">Notatki z tygodni</a>
+      <a href="index.html" class="navigation__link">O stronie</a>
     </nav>
 
     <main class="main">
@@ -33,20 +31,20 @@
         <h1 class="main__heading">Jakich rzeczy udało mi się dowiedzieć?</h1>
       </header>
 
-      <ul class="horizontal-list">
-        <li><a href="#week1">Tydzień 1</a></li>
-        <li><a href="#week2">Tydzień 2</a></li>
-        <li><a href="#week3">Tydzień 3</a></li>
-        <li><a href="#week4">Tydzień 4</a></li>
-        <li><a href="#week5">Tydzień 5</a></li>
-        <li><a href="#week6">Tydzień 6</a></li>
-        <li><a href="#week7">Tydzień 7</a></li>
-        <li><a href="#week8">Tydzień 8</a></li>
-        <li><a href="#week9">Tydzień 9</a></li>
-        <li><a href="#week10">Tydzień 10</a></li>
-        <li><a href="#week11">Tydzień 11</a></li>
-        <li><a href="#week12">Tydzień 12</a></li>
-        <li><a href="#week13">Tydzień 13</a></li>
+      <ul class="main__list">
+        <li class="main__list__item"><a href="#week1">Tydzień 1</a></li>
+        <li class="main__list__item"><a href="#week2">Tydzień 2</a></li>
+        <li class="main__list__item"><a href="#week3">Tydzień 3</a></li>
+        <li class="main__list__item"><a href="#week4">Tydzień 4</a></li>
+        <li class="main__list__item"><a href="#week5">Tydzień 5</a></li>
+        <li class="main__list__item"><a href="#week6">Tydzień 6</a></li>
+        <li class="main__list__item"><a href="#week7">Tydzień 7</a></li>
+        <li class="main__list__item"><a href="#week8">Tydzień 8</a></li>
+        <li class="main__list__item"><a href="#week9">Tydzień 9</a></li>
+        <li class="main__list__item"><a href="#week10">Tydzień 10</a></li>
+        <li class="main__list__item"><a href="#week11">Tydzień 11</a></li>
+        <li class="main__list__item"><a href="#week12">Tydzień 12</a></li>
+        <li class="main__list__item"><a href="#week13">Tydzień 13</a></li>
       </ul>
 
       <!-- START OF WEEEK -->
@@ -54,7 +52,7 @@
         <h2 class="week__heading">Tydzień 1:</h2>
         <article class="article">
           <h3 class="article__heading">Absolutnie niczego</h3>
-          <p>
+          <p class="article__p">
             Choć to raczej nic dziwnego, z racji, że był to tydzień czysto
             organizacyjny.
           </p>
@@ -65,31 +63,33 @@
       <section id="week2" class="week anchorOffset">
         <h2 class="week__heading">Tydzień 2:</h2>
         <article class="article">
-          <h3 class="article__heading">Znaczniki &lt;main&gt;&lt;section&gt;&lt;article&gt;</h3>
-          <p>
+          <h3 class="article__heading">
+            Znaczniki &lt;main&gt;&lt;section&gt;&lt;article&gt;
+          </h3>
+          <p class="article__p">
             Kiedy tworzyłem swoje pierwsze strony nie używałem ich. Miałem
             okazję je później poznać, ale dopiero wyrabiam nawyk ich używania.
           </p>
-          <ul>
-            <li>
+          <ul class="article__list">
+            <li class="article__list__item">
               Artykuł powinien opakowywać taką treść, która wykopiowana ze
               strony sama w sobie (bez niczego zzewnątrz) powinna być
               pojedynczą, zrozumiałą i samodzielną treścią
             </li>
-            <li>
+            <li class="article__list__item">
               Sekcja może zawierać albo wiele artykułów, albo być wydzieloną
               częścią artykułu. Nie musi być zrozumiała samodzielnie. Służy
               raczej do grupowania treści
             </li>
-            <li>
+            <li class="article__list__item">
               Zarówno sekcje i artykuły powinny zaczynać się od nagłówków
             </li>
-            <li>
+            <li class="article__list__item">
               Poziom nagłówka powinien odpowiadać poziomowi zagnieżdżenia
               (liczymy tylko semantyczne znaczniki section/article, divy nic nie
               zmieniają)
             </li>
-            <li>
+            <li class="article__list__item">
               Poza znacznikami MAIN raczej nie powinniśmy mieć sekcji ani
               artykułów oraz znaczników Hx
             </li>
@@ -98,7 +98,7 @@
 
         <article class="article">
           <h3 class="article__heading">Validator kodu</h3>
-          <p>
+          <p class="article__p">
             Dostępnego pod
             <a href="https://validator.w3.org/nu/#textarea">tym adresem</a>
             validatora kodu nie używałem ani nie widziałem wcześniej. Wydaje się
@@ -107,8 +107,10 @@
         </article>
 
         <article class="article">
-          <h3 class="article__heading">Kończenie szkieletu strony przez ! + TAB</h3>
-          <p>
+          <h3 class="article__heading">
+            Kończenie szkieletu strony przez ! + TAB
+          </h3>
+          <p class="article__p">
             Wcześniej nie używałem VSC do pisania stron więc nie znam jeszcze
             wszystkich jego funkcjonalności. Szkielet strony to fajne
             rozwiązanie, choć z racji, że wcześniej używałem VSC do tworzenia
@@ -119,25 +121,25 @@
 
         <article class="article--red">
           <h3 class="article__heading">Dodatkowe pytania:</h3>
-          <ul>
-            <li>
+          <ul class="article__list">
+            <li class="article__list__item">
               Kiedy używamy znacznika &lt;header&gt; a kiedy nie? Według
               informacji na slajdach, można go użyć zarówno do main, section
               oraz article, jednak w szkoleniu nie został wykorzystany przy
               artykułach. Dlaczego?
               <ul class="article__list--green">
-                <li>
+                <li class="article__list__item">
                   Header kiedy mamy bardziej złożony nagłówek niż tylko h1-6
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="article__list__item">
               Jaka jest poprawna forma wypisywania tagów HTML jako kodu? Tag
               "XMP" którego użyłem? Zastąpienie &lt; przez &amp;lt; oraz &gt;
               przez &amp;gt;? Jeszcze coś innego?
               <ul class="article__list--green">
-                <li>"xmp to prehistoria :)"</li>
-                <li>
+                <li class="article__list__item">"xmp to prehistoria :)"</li>
+                <li class="article__list__item">
                   najlepiej używać &amp;lt; i tympodobnych. Dla wygody można
                   użyć
                   <a href="https://mothereff.in/html-entities">konwertera</a>
@@ -159,7 +161,7 @@
         <h2 class="week__heading">Tydzień 3:</h2>
         <article class="article">
           <h3 class="article__heading">Kanban & Trello</h3>
-          <p>
+          <p class="article__p">
             Miałem wcześniej do czynienia z tym narzędziem pod kątem organizacji
             zadań długoterminowo.<br />
             Pierwszy raz używam go do monitorowania postępów w małych zadaniach.
@@ -167,18 +169,20 @@
         </article>
 
         <article class="article">
-          <h3 class="article__heading">&lt;b&gt; vs &lt;strong&gt; vs &lt;i&gt; vs &lt;em&gt;</h3>
-          <p>
+          <h3 class="article__heading">
+            &lt;b&gt; vs &lt;strong&gt; vs &lt;i&gt; vs &lt;em&gt;
+          </h3>
+          <p class="article__p">
             Do tej pory moja wiedza kończyłą się na "oba pogrubiają" oraz "oba
             pochylają". Dopiero w trakcie szkolenia (w dużej części nastawionego
             na semantykę) poznałem różnicę tj:<br />
           </p>
           <ul class="article__list--green">
-            <li>
+            <li class="article__list__item">
               &lt;b&gt; oraz &lt;i&gt; to znaczniki wykorzystywane wyłącznie do
               ozdabiania tekstu (zmiany jego wyglądu)
             </li>
-            <li>
+            <li class="article__list__item">
               &lt;strong&gt; oraz &lt;em&gt; to znaczniki semantyczne, strong
               podkreśla istotność wyrażenia, em sugeruje, że zwrot może być
               metaforą/ironią.
@@ -188,13 +192,13 @@
 
         <article class="article">
           <h3 class="article__heading">Przewijanie do danego elementu</h3>
-          <p>
+          <p class="article__p">
             Kiedyś używałem, później przestałem, ostatecznie zapomniałem, a
             teraz mi przypomniano =)<br />
             Aby przewinąć stronę należy w odnośniku wpiać &lt;a
             href=&quot;#ID&quot;&gt;Widoczny Teskt&lt;/a&gt;
           </p>
-          <p>
+          <p class="article__p">
             Istniał jednak jeden problem przy używaniu elementów ustawionych
             jako position: sticky. (Po przesunieciu elementy były zasłonięte)
             Jednym z obejść problemu było dodanie:
@@ -212,12 +216,12 @@
 
         <article class="article">
           <h3 class="article__heading">Specyficzność stylów</h3>
-          <p>
+          <p class="article__p">
             Ogólna zasada brzmiąca "style o większej specyficzności mają
             priorytet" oraz "ze stylów o równej specyficzności priorytet ma ten
             dodany później"
           </p>
-          <p>
+          <p class="article__p">
             Znałem już wcześniej. I nawet mniej-więcej potrafiłem wyczuć które
             odwołanie jest bardziej specyficzne. Niemniej, są przypadki, które
             interpretowałbym inaczej. W ramach szkolenia dopiero poznałem
@@ -234,63 +238,69 @@
 
         <article class="article">
           <h3 class="article__heading">Nadawanie nazw</h3>
-          <ul>
-            <li>
+          <ul class="article__list">
+            <li class="article__list__item">
               Zalecana metoda nadawania nazw to używanie pojedynczych słów (a
               gdy to niemożliwe to kebab-case).
             </li>
-            <li>Nazwy klas powinny opisywać funkcje elementu na stronę.</li>
-            <li>Nazwy klas powinny być w języku angielskim.</li>
+            <li class="article__list__item">
+              Nazwy klas powinny opisywać funkcje elementu na stronę.
+            </li>
+            <li class="article__list__item">
+              Nazwy klas powinny być w języku angielskim.
+            </li>
           </ul>
         </article>
 
         <article class="article">
           <h3 class="article__heading">Odwołania do elementów w CSS</h3>
-          <ul>
-            <li>
+          <ul class="article__list">
+            <li class="article__list__item">
               Do elementów odwołujemy się podając ich nazwę. Na przykład:
-              <ul>
-                <li>
+              <ul class="article__list">
+                <li class="article__list__item">
                   <span class="article__small-code">a {...</span> albo
                   <span class="article__small-code">div {...</span>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="article__list__item">
               Do klas odwołujemy się podając ich nazwę po kropce, Na przykład:
-              <ul>
-                <li>
+              <ul class="article__list">
+                <li class="article__list__item">
                   <span class="article__small-code">.moja-klasa {...</span> albo
                   <span class="article__small-code">.small-code {...</span>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="article__list__item">
               Do ID odwołujemy się podając ich nazwę po #. Na przykład:
-              <ul>
-                <li>
+              <ul class="article__list">
+                <li class="article__list__item">
                   <span class="article__small-code">#moje-id {...</span> albo
                   <span class="article__small-code">#top {...</span>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="article__list__item">
               Do elementu X będącego potomkiem elementu Y odwołujemy się
               oddzielając nazwy spacją:
-              <ul>
-                <li>
+              <ul class="article__list">
+                <li class="article__list__item">
                   <span class="article__small-code">Y X {...</span> albo
                   <span class="article__small-code">main article {...</span>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="article__list__item">
               Do elementu o nazwie X zawierającego klasę Y odwołujemy się pisząc
               nazwę elemntu i klasę po kropce
-              <ul>
-                <li>
+              <ul class="article__list">
+                <li class="article__list__item">
                   <span class="article__small-code">X.Y {...</span> albo
-                  <span class="article__small-code">article.highlighted {...</span>
+                  <span class="article__small-code"
+                    >article.highlighted {...</span
+                  >
                 </li>
               </ul>
             </li>
@@ -299,18 +309,20 @@
 
         <article class="article">
           <h3 class="article__heading">Pierwszy kontakt z JS</h3>
-          <p>
+          <p class="article__p">
             Jako, że wcześniej nie używałem JS to wszystko jest tu dla mnie
             nowe.
           </p>
           <section class="article__subsection">
             <h4 class="article__subsection__heading">Dodawanie skryptów</h4>
-            <p>
+            <p class="article__p">
               Skrypty dodajemy bezpośrednio przez zamknięciem znacznika body
               wewnątrz tagu <br />
-              <span class="article__small-code">&lt;script&gt;&lt;/script&gt;</span>
+              <span class="article__small-code"
+                >&lt;script&gt;&lt;/script&gt;</span
+              >
             </p>
-            <p>
+            <p class="article__p">
               Można też odwołać się do zewnętrznego pliku z kodem JS poprzez:
               <br />
               <span class="article__small-code">
@@ -320,19 +332,19 @@
           </section>
           <section>
             <h4 class="article__subsection__heading">Zmienne i stałe</h4>
-            <p>
+            <p class="article__subsection__p">
               Podobnie jak w każdym języku programowania, występują tu zmienne i
               stałe.
             </p>
-            <p>
+            <p class="article__subsection__p">
               Zmienne tworzymy przez polecenie <br />
               <span class="article__small-code">let name = 'value'</span>
             </p>
-            <p>
+            <p class="article__subsection__p">
               Stałe tworzymy przez polecenie <br />
               <span class="article__small-code">const name = 'value'</span>
             </p>
-            <p>
+            <p class="article__subsection__p">
               Aby wykorzystać zmienną w ramach jakiegoś stringa należy opakować
               treść w ` (znaczek pod ~), a wewnątrz polecenia podać
               $(nazwazmiennej), np:<br />
@@ -343,15 +355,15 @@
           </section>
           <section>
             <h4 class="article__subsection__heading">Komunikaty w JS</h4>
-            <p>
+            <p class="article__subsection__p">
               Pierwsze instrukcje poznane w ramach szkolenia to alert oraz
               console log
             </p>
-            <p>
+            <p class="article__subsection__p">
               Alert (powiadomienie-popup w przeglądarce) wywołujemy tak:<br />
               <span class="article__small-code">alert('value')</span>
             </p>
-            <p>
+            <p class="article__subsection__p">
               Console log (komunikat widoczny w konsoli dostępnej pod F12)
               wywołujemy tak: <br />
               <span class="article__small-code">console.log('value')</span>
@@ -365,13 +377,13 @@
         <h2 class="week__heading">Tydzień 4:</h2>
         <article class="article">
           <h3 class="article__heading">box-sizing</h3>
-          <p>
+          <p class="article__p">
             Raczej przypomnienie niż coś nowego; Domyślnie jak definiujemy
             wymiary jakiegoś elementu to definiujemy rozmiary wyłącznie treści.
             Do ostatecznych wymiarów elementu trzeba dodatkowo dodać padding
             oraz border.
           </p>
-          <p>
+          <p class="article__p">
             Można zmodyfikować sposób nadawania width/height (tak, aby ten
             wymiar opisywał treść elementu WRAZ Z paddingiem i borderem poprzez
             zmianę parametru box-sizing:<br />
@@ -381,16 +393,16 @@
 
         <article class="article">
           <h3 class="article__heading">position: sticky;</h3>
-          <p>
+          <p class="article__p">
             Samo position: sticky; było mi znane już dawno. W ramach kursu
             dowiedziałem się natomiast dwóch rzeczy:
           </p>
-          <ul>
-            <li>
+          <ul class="article__list">
+            <li class="article__list__item">
               Parent elementu z ustawionym position: sticky nie może mieć
               ustawionego overflow (albo nie będzie to działać)
             </li>
-            <li>
+            <li class="article__list__item">
               Polecenie "sticky"
               <strong>przykleja elementy WYŁĄCZNIE do końca parenta</strong>
               (czyli jeżeli nadamy to dla jakiejś sekcji, do gdy skończymy
@@ -401,24 +413,26 @@
 
         <article class="article">
           <h3 class="article__heading">position: relative/absolute;</h3>
-          <p>
+          <p class="article__p">
             Kolejne przypomnienie: position ABSOLUTE ustawia element względem
             najbliższego przodka z parametrem RELATIVE
           </p>
         </article>
 
         <article class="article">
-          <h3 class="article__heading">float: left/right oraz clear/overflow</h3>
-          <p>
+          <h3 class="article__heading">
+            float: left/right oraz clear/overflow
+          </h3>
+          <p class="article__p">
             Korzystając z polecenia "flow" można sprawić, że element z tym
             parametrem jest opływany przez tekst z określonej strony.
           </p>
-          <p>
+          <p class="article__p">
             Istnieje jednak haczyk - w momencie, gdy element opływający jest
             krótszy od elementu opływanego - ten zewnętrzny pojemnyk nie jest
             rozciągany do wysokości elementu z parametrem float.
           </p>
-          <p>
+          <p class="article__p">
             Przykład takiej sytuacji: żółty prostokąt po lewej ma ustawione
             float: right. Div w którym się znajduje ma białe tło. Tło nie jest
             rozciągane:
@@ -428,13 +442,13 @@
             alt="Printscreen with example of flow property problem"
             class="article__image"
           />
-          <p>
+          <p class="article__p">
             Rozwiązaniem takiego problemu może być ustawienie parametru clear
             dla jakiegoś obiektu (choćby pustego diva) w tym samym
             kontenerze:<br />
             <span class="article__small-code">clear: left/right</span>
           </p>
-          <p>
+          <p class="article__p">
             Inne rozwiązanie to ustawienie OVERFLOW dla kontenera w którym
             element z flow się znajduje<br />
             <span class="article__small-code">overflow: hidden</span><br />
@@ -445,7 +459,7 @@
 
         <article class="article">
           <h3 class="article__heading">JavaScript - typy</h3>
-          <p>
+          <p class="article__p">
             Podobnie jak w pythonie - typów zmiennych w JS nie musimy deklarować
             (są przypisywane automatycznie w zależności od danych)<br />
             Można sprawdzić typ zmiennej przez polecenie <br />
@@ -454,16 +468,18 @@
         </article>
 
         <article class="article">
-          <h3 class="article__heading">JavaScript - przypisanie zmiennej do zmiennej</h3>
-          <p>
+          <h3 class="article__heading">
+            JavaScript - przypisanie zmiennej do zmiennej
+          </h3>
+          <p class="article__p">
             W sytuacji, w której mamy zdefiniowaną zmienną X<br />
             <span class="article__small-code">let x = 10</span>
           </p>
-          <p>
+          <p class="article__p">
             I zdefiniujemy nową zmienną Y równą X<br />
             <span class="article__small-code">let y = x</span>
           </p>
-          <p>
+          <p class="article__p">
             To do zmiennej Y jest kopiowany wynik zmiennej X. To znaczy obie
             zmienne wskazują ten sam wynik. Y nie wskazuje na X. Dlatego też
             zmiana X nie zmodyfikuje Y. Tzn. po poleceniu:<br />
@@ -476,23 +492,23 @@
           <h3 class="article__heading">
             JavaScript - uzyskanie wyniku jakiegoś elementu na bieżącej stronie
           </h3>
-          <p>
+          <p class="article__p">
             W JS można otrzymać cały kod elementu (wraz z wszystkimi jego
             potomkami) poprzez polecenie:<br />
             <span class="article__small-code"
               >document.querySelectir('.nazwaKlasy/#nazwaId/nazwaElementu')</span
             >
           </p>
-          <p>
+          <p class="article__p">
             To samo można było osiągnąc w jQuerry poprzez<br />
             <span class="article__small-code">$('.nazwaKlasy')</span>
           </p>
-          <p>
+          <p class="article__p">
             Na potrzeby odniesienia się do elementu w ramach JS, przy stosowaniu
             nazw zgodnych z BEM takie klasy powinny mieć modifier --js np:<br />
             <span class="article__small-code">article__header--js</span>
           </p>
-          <p>
+          <p class="article__p">
             Możemy nadpisywać zawartość elementu po przechwyceniu selectora<br />
             <span class="article__small-code">
               myTitle = document.querySelector('.title1')<br />
@@ -503,7 +519,7 @@
 
         <article class="article">
           <h3 class="article__heading">Różnica między DOM a HTML</h3>
-          <p>
+          <p class="article__p">
             HTML mamy w plikach czy w edytorze. Jest to kod który piszemy na
             podstawie którego generowana jest nasza strona. <br />DOM to finalny
             wynik wyświetlany w przeglądarce. Źródło strony (napisane w HTML)

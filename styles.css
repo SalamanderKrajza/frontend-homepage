@@ -122,25 +122,16 @@
   position: sticky;
   top: 0px;
   box-sizing: border-box;
-  z-index: 999;
 }
 
-.navigation__list {
-  list-style: none;
-}
-
-.navigation__list li {
+.navigation__link {
+  color: #3f232c;
+  text-decoration: none;
+  padding: 15px 20px;
   float: right;
 }
 
-.navigation__list__link {
-  padding: 8px;
-  color: #3f232c;
-  text-decoration: none;
-  padding: 10px 20px;
-}
-
-.navigation__list__link:hover {
+.navigation__link:hover {
   color: #e66b76;
   border-radius: 20px;
 }
@@ -165,7 +156,8 @@
 }
 
 
-.article__list--green {
+.article__list--green,
+.article__sublist--green {
   color: rgb(5, 83, 5);
 }
 
@@ -174,12 +166,12 @@
 }
 
 /* -----------------------Settings for content (prepared for specific pages)----------------------- */
-.horizontal-list {
+.main__list {
   list-style: none;
   overflow: hidden;
 }
 
-.horizontal-list li {
+.main__list li {
   float: left;
   padding: 6px;
 }
@@ -197,6 +189,7 @@
 .week__heading{
   position: sticky;
   top: 10px;
+  display: inline-block;
 }
 
 .article__code {
