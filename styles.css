@@ -34,16 +34,16 @@
 }
 
 /* .hero span <- Previous version (replaced by 6 lines below) */
-.hero__title1,
-.hero__title2,
-.hero__description1,
-.hero__description2,
-.hero__description3,
-.hero__description4 {
+.hero__title-1,
+.hero__title-2,
+.hero__description-1,
+.hero__description-2,
+.hero__description-3,
+.hero__description-4 {
   white-space: pre; /* needed to cause hading to copy correctly */
 }
 
-.hero__title1 {
+.hero__title-1 {
   position: absolute;
   bottom: 257px;
   left: 382px;
@@ -52,7 +52,7 @@
   text-shadow: 3px 3px #235950;
 }
 
-.hero__title2 {
+.hero__title-2 {
   position: absolute;
   bottom: 229px;
   left: 382px;
@@ -69,7 +69,7 @@
   color: yellow;
 }
 
-.hero__description1 {
+.hero__description-1 {
   position: absolute;
   bottom: 172px;
   left: 382px;
@@ -79,7 +79,7 @@
   letter-spacing: 1px;
 }
 
-.hero__description2 {
+.hero__description-2 {
   position: absolute;
   bottom: 48px;
   left: 382px;
@@ -88,7 +88,7 @@
   letter-spacing: 1px;
 }
 
-.hero__description3 {
+.hero__description-3 {
   position: absolute;
   bottom: 111px;
   left: 680px;
@@ -98,7 +98,7 @@
   transform: scaleX(0.8);
 }
 
-.hero__description4 {
+.hero__description-4 {
   position: absolute;
   bottom: 65px;
   left: 673px;
@@ -156,12 +156,12 @@
 }
 
 
-.article__list--green,
-.article__sublist--green {
+.list--green
+{
   color: rgb(5, 83, 5);
 }
 
-.article__list--green li {
+.list--green li {
   margin: 5px 0px;
 }
 
