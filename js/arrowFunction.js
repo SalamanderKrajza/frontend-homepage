@@ -11,4 +11,4 @@ console.log(arrowFunctionWithReturn(1,2))
 
 
 const onelinerWhichReturns = (arg1, arg2) => `3. To jest arg1: ${arg1}; a to jest arg2: ${arg2}`
-console.log(onelinerWhichReturns('Gruszka', 'Cytryna'))
+console.log(onelinerWhichReturns(`Gruszka`, `Cytryna`))

@@ -1,3 +1,17 @@
+/* Special tags */
+.green-text {
+  color: rgb(5, 83, 5);
+}
+
+.tab{
+  margin: 0 0 0 20px
+}
+
+.doubletab{
+  margin: 0 0 0 40px
+}
+
+
 /* -----------------------Base settings for every subpage----------------------- */
 .body {
   background-color: #f5f5f5;
@@ -209,6 +223,10 @@
   display: inline-block;
   margin: 5px;
   letter-spacing: 1px;
+}
+
+.article__small-code--block {
+  display: block;
 }
 
 .article__image {

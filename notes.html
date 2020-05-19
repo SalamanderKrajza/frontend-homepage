@@ -528,6 +528,468 @@
           </p>
         </article>
       </section>
+
+      <!-- START OF WEEEK -->
+      <section id="week5" class="week anchorOffset">
+        <h2 class="week__heading">Tydzień 5:</h2>
+        <article class="article">
+          <h3 class="article__heading">Funkcje w JS</h3>
+          <section class="article__subsection">
+            <h4 class="article__subsection__heading">
+              Podstawowy zapis funkcji:
+            </h4>
+            <img
+              class="article__image"
+              src="images/w5/function_js.png"
+              alt="How create function in JS"
+              height="250"
+            />
+          </section>
+          <section class="article__subsection">
+            <h4 class="article__subsection__heading">
+              Fat arrow functions:
+            </h4>
+            <img
+              class="article__image"
+              src="images/w5/function_js_fat_arrow.png"
+              alt="How create function in JS (fat arrow method)"
+              height="200"
+            />
+            <p class="article__text">
+              Arrow functions są nie mają słowa kluczowego
+              <span class="green-text">function</span>, zamiast tego są
+              przypisywane do stałych.<br />
+              Pierwszy przykład (<span class="green-text">greet</span>) to
+              funkcja bezzwrotna, która wyświetla treść w konsoli.<br />
+              Druga funkcja (<span class="green-text">calculate</span>) to
+              oneliner który zwraca wynik wyrażenia zapisanego po znaku
+              <span class="green-text">=></span>
+            </p>
+          </section>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            Obiekty w JS; metody w ramach obiektów
+          </h3>
+          <img
+            class="article__image"
+            src="images/w5/obiekt_js.png"
+            alt="How create object in JS"
+            height="250"
+          />
+          <ul class="list">
+            <li class="list__item">Działają podobnie do klas w pythonie.</li>
+            <li class="list__item">
+              Podobnie jak tam funkcje w ramach obiektu nazywamy metodami.
+            </li>
+            <li class="list__item">
+              Własności obiektów tworzymy na zasadzie pythonowych słowników (tj
+              klucz:wartość)
+            </li>
+            <li class="list__item">
+              Słowa LET/CONST są pomijane, po prostu podajemy nazwę
+              zmiennej/funkcji
+            </li>
+            <li class="list__item">
+              Metody tworzymy używając sposobu arrow function.
+            </li>
+            <li class="list__item">
+              Do elementow wewnątrz obiektu odwołujemy się jak w VBA/PYTHONIE -
+              przez kropkę tj np.
+              <span class="article__small-code">deathStar.levels</span>
+            </li>
+          </ul>
+          <section class="article__subsection">
+            <h4 class="article__subsection__heading">
+              Alternatywny sposób na tworzenie metod w obiekcie (poza arrow
+              function)
+            </h4>
+            <div class="article__code">
+              <p>var person = {</p>
+              <p class="tab">firstName: "John",</p>
+              <p class="tab">lastName : "Doe",</p>
+              <p class="tab">id : 5566,</p>
+              <p class="tab">fullName : function() {</p>
+              <p class="doubletab">
+                return this.firstName + " " + this.lastName;
+              </p>
+              <p class="tab">}</p>
+              <p>};</p>
+            </div>
+          </section>
+          <section class="article__subsection">
+            <h4 class="article__subsection__heading">
+              Tworzenie obiektu w obiekcie
+            </h4>
+            <div class="article__code">
+              <p>parentObject{</p>
+              <p class="tab">firstName: "John",</p>
+              <p class="tab">lastName : "Doe",</p>
+              <p class="tab">childObject : {</p>
+              <p class="doubletab">
+                childObectSomething: "Example";
+              </p>
+              <p class="tab">}</p>
+              <p>};</p>
+            </div>
+          </section>
+          <section class="article__subsection">
+            <h4 class="article__subsection__heading">
+              Odwołania do metod (normalnie + bracket notation)
+            </h4>
+            <div class="article__code">
+              <p>const testObject = {</p>
+              <p class="tab">firstName:"Piotr",</p>
+              <p class="tab">fullname: function(surname) {</p>
+              <p class="doubletab">return `${this.firstName} ${surname}`</p>
+              <p class="tab">}</p>
+              <p>};</p>
+              <p>console.log(testObject.fullname('Mr.'));</p>
+              <p>console.log(testObject['fullname']('Mr.'))</p>
+            </div>
+          </section>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">Mutowalność i niemutowalność w JS</h3>
+          <p class="article__text">
+            Tutaj również jest dużo analogi do pythona. Wszystkie typy proste (a
+            więc stringi/liczby) stanowią wskazania na istniejące we
+            wszechświecie wartości miejsca, które nie są nadpisywane. Zmiana
+            wartości prostej ZAWSZE będzie stanowiła przepięcie do innego
+            miejsca we wszechświecie wartości. Dlatego też jeżeli dwie zmienne
+            mają jednakową wartość (wskazują na to samo miejsce) to aktualizacja
+            jednej z nich odpina (tą jedną) od tej wartości i przypina do innej.
+            Wartość drugiej zmiennej pozostaje bez zmian.
+          </p>
+          <section class="article__subsection">
+            <h4 class="article__subsection__heading">
+              Przypisania do obiektów
+            </h4>
+            <p class="article__text">
+              Obiektu skolei zachowują się przeciwnie. Każdy obiekt jest nowym
+              tworem w przestrzeni wartości. W momencie kiedy wiele zmiennych ma
+              przypisany ten sam obiekt to zmiana elementów tego obiektu z
+              poziomu dowolnej zmiennej wpływa na wszystkie wskazania (to jest
+              pojedynczy obiekt, poszczególne zmiennie nie mają niezależnych
+              opii)
+            </p>
+            <img
+              class="article__image"
+              src="images/w5/humanOne=humanTwo.png"
+              alt="How variables and values are connected"
+              height="250"
+            />
+          </section>
+          <section class="article__subsection">
+            <h4 class="article__subsection__heading">
+              Przypisania do wartości/obiektów wewnątrz obiektów
+            </h4>
+            <p class="article__text">
+              To czy element jest wewnątrz innego obiektu nie ma znaczenia,
+              zasada jest dokłądnie taka sama - jeżeli przypisujemy do wartości
+              prostej (string/liczba) to przypisujemy do konkretnego miejsca w
+              przestrzeni i zmiany jednego wystąpienia danej wartości (jednej
+              zmiennej) nie będą wpływać na inne.
+            </p>
+            <p class="article__text">
+              Np. jeżeli w ramach obiektu person jest person.Age=36 i ktoś zrobi
+              zmienną const test=person.Age a następnie zmieni person.Age albo
+              test to drugie nie zostanie zmienione
+            </p>
+            <p class="article__text">
+              Jeżeli w ramach obiektu jest inny obiekt i ktoś przypisze do innej
+              zmiennej ten obiekt tj np const zmienna=person.childObject a
+              następnie zmieni jakąś własność tego obiektu tj np
+              zmienna.name='something' to ta zmiana zajdzie również w obiekcie
+              person.childObject
+            </p>
+          </section>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">Description List</h3>
+          <ul class="list">
+            <li class="list__item">DL - description list</li>
+            <li class="list__item">DT - description title</li>
+            <li class="list__item">DD - description details</li>
+          </ul>
+          <p class="article__text">
+            Lista służąca do opisywania jakichś definicji/wskazówek. Może być np
+            użyta do stworzenia bestriariusza gdzie w liście mamy
+          </p>
+          <p class="article__code">
+            &lt;dl&gt;<br />
+            &lt;dt&gt;Arachnomorf&lt;/dt&gt;<br />
+            &lt;dd&gt;Arachnomorf jest padatny na większość wiedźmińskich
+            znaków&lt;/dd&gt;<br />
+            &lt;dl&gt;
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">Tabele</h3>
+          <ul class="list">
+            <li class="list__item">&lt;tr&gt; - table row</li>
+            <li class="list__item">
+              &lt;td&gt; - komórka tabeli (Table data/cell)
+            </li>
+            <li class="list__item">&lt;thead&gt; - table header (nagłówek)</li>
+            <li class="list__item">&lt;th&gt; - komórka w nagłówku</li>
+            <li class="list__item">&lt;tbody&gt; - ciało tabeli</li>
+            <li class="list__item">
+              &lt;caption&gt; - rzadko używany, opis tabeli (przed danymi,
+              wygląda jak nagłówek)
+            </li>
+          </ul>
+          <p class="article__text">
+            Tabel należy używać tylko do przechowywaniu danych które normalnie
+            opakowuje się w tabele (jakieś liczby, statystyki itd). NIGDY do
+            budowania layoutów
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">Flex</h3>
+          <ul class="list">
+            <li class="list__item">
+              Własność
+              <strong class="article__small-code article__small-code--block"
+                >display:flex</strong
+              >
+              nadajemy kontenerowi zawierającemu układane elementy
+            </li>
+            <li class="list__item">
+              Flex pracuje w dwóch osiach: pionowej i poziomej
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla KONTENERA)
+              <div class="article__small-code article__small-code--block">
+                <strong>flex-direction:</strong>
+                row(domyślnie)/column/row-reverse/column-reverse
+              </div>
+              określamy która oś jest osią podstawową
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla KONTENERA)
+              <div class="article__small-code article__small-code--block">
+                <strong>flex-wrap:</strong> nowrap(domyślnie)/wrap/wrap-reverse
+              </div>
+              określamy co ma się dziać z elementami jeżeli nie będą się
+              mieścić.
+              <strong>Bez ustawienia flex-wrap elementy są zmniejszane.</strong>
+              Z zawijaniem elementy przechodzą do nowych linii.
+            </li>
+            <li class="list__item">
+              (ustawiane dla KONTENERA)
+              <div class="article__small-code article__small-code--block">
+                <strong>flex-flow:</strong> row nowrap
+              </div>
+              wersja flex-direction oraz flex-wrap
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla KONTENERA)
+              <div class="article__small-code article__small-code--block">
+                <strong>justify-content:</strong>
+                flex-start(domyślnie)/flex-end/center/space-between/space-around
+              </div>
+              - określamy jak mają być rozkładane elementy na głównej osi
+              (określanej przez flex-direction)
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla KONTENERA)
+              <div class="article__small-code article__small-code--block">
+                <strong>align-conent:</strong> stretch(domyślnie, rozciąga
+                elementy na całe wolne
+                miejsce)flex-start/flex-end/center/space-between/space-around
+              </div>
+              - określamy jak mają być rozkładane elementy na osi prostopadłej
+              do głównej
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla KONTENERA)
+              <div class="article__small-code article__small-code--block">
+                <strong>align-items:</strong> stretch(domyślnie, rozciąga
+                elementy na całe wolne
+                miejsce)flex-start/flex-end/center/baseline
+              </div>
+              - określamy jak mają być rozkładane elementy na osi prostopadłej
+              do głównej - w przeciwieńśtwie do align-content tutaj zasada tyczy
+              się pojedynczych wierszy obiektów flexowych, a nie całości
+            </li>
+            <li class="list__item">
+              O działaniu <strong>baseline</strong> (np. w align-items:baseline)
+              można poczytać tu (link nie dotyczył flexboxa ale zasada podobna)
+              <a href="http://infoheap.com/css-inline-block-baseline-alignment/"
+                >baseline aligment</a
+              >
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla ELEMENTU)
+              <div class="article__small-code article__small-code--block">
+                <strong>align-self:</strong> stretch(domyślnie, rozciąga
+                elementy na całe wolne
+                miejsce)stretch/flex-start/flex-end/center/baseline
+              </div>
+              - określamy jak mają być rozkładane elementy na osi prostopadłej
+              do głównej
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla ELEMENTU)
+              <div class="article__small-code article__small-code--block">
+                <strong>order:</strong> -5/0(domyślnie)/1/10/...
+              </div>
+              możemy wpływać na kolejność elementów (domyślna wartość to 0). Im
+              mniejsza cyfra tym wcześniej element wystąpi
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla ELEMENTU)
+              <div class="article__small-code article__small-code--block">
+                <strong>flex-grow:</strong> 0(domyślnie)/1/2
+              </div>
+              określamy jak bardzo elementy mogą rosnąć żeby wypełnić przestrzeń
+              kiedy strona się powiększa (element pochłania puste przestrzenie
+              żeby rosnąć). Jeżeli damy na elementach 1 a na wybranym 2 to ten
+              element z 2 weźmie 2x więcej pustego miejsca żeby się rozszerzyć
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla ELEMENTU)
+              <div class="article__small-code article__small-code--block">
+                <strong>flex-shrink:</strong> 0/1(domyślnie)/2
+              </div>
+              określamy jak bardzo elementy mogą kurczyć o ile jest za mało
+              miejsca. kiedy ustawimy 0 to elementy nie mogą się skurczyć
+              bardziej niz oryginalny rozmiar (zaczną wychodzić poza kontener).
+              jeżeli element będzie miał flex-shrink:2 to będzie bardziej
+              kurczony od innych (np. możemy zmniejszać bardziej marginesy).
+              UWAGA - warto to ustawić dla grafik bo inaczej mogą nie trzymać
+              wpisanych z palca (jako width: 123px / height: 123px) wymiarów!
+            </li>
+            <li class="list__item">
+              Przez (ustawiane dla ELEMENTU)
+              <div class="article__small-code article__small-code--block">
+                <strong>flex-basis:</strong> none(domyślnie)/150px/50%/content
+              </div>
+              rozmiar bazowy - wysokości/szerokości (w zależności od kierunku
+              flexa, bierzemy miejsce z osi zgodnej z kierunkiem we
+              flex-direction)
+            </li>
+            <li class="list__item">
+              (ustawiane dla ELEMENTU)
+              <div class="article__small-code article__small-code--block">
+                <strong>flex:</strong> 0 1 150px (flex-grow, flex-shrink;
+                flex-basiss)
+              </div>
+              wersja flex-grow, flex-shrink oraz flex-basis
+            </li>
+            <li class="list__item">
+              UWAGA - flex działa dziwnie. Np. Jeżeli mamy kontener o szerokości
+              300px, grafikę o ustalonych wymiarach 150px na 150px oraz element
+              &lt;p&gt; z tekstem o nieustalonym rozmiarze - normalnie &lt;p&gt;
+              wziełoby pozostałe 150px i zawijało text. Flex natomiast skurczy
+              obrazek (o ile nie ma flex-shrink:0 żeby paragraf miał więcej
+              miejsca )
+            </li>
+            <li class="list__item">
+              Do flexboxa czasami przydatne jest zgrupowanie treści (która ma
+              być razem a nie w kolumnach obok siebie) w jednego zewnętrznego
+              diva
+            </li>
+          </ul>
+          <p class="article__text">
+            Jako, że flex jest bardzo rozbudowany warto korzystać z dodatkowych
+            materiałów jak:
+          </p>
+          <ul class="list">
+            <li class="list__item">powtórne obejrzenie lekcji</li>
+            <li class="list__item">
+              <a href="https://yoksel.github.io/flex-cheatsheet/">
+                podgląd działania poszczególnych własności
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="https://flexboxfroggy.com/#pl">
+                flexbox forggy czyli gra-ćwiczenie
+              </a>
+            </li>
+          </ul>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">RESET/NORMALIZE</h3>
+          <p class="article__text">
+            Reset to inaczej wyczyszczenie styli domyślnych przeglądarki. Ma to
+            zapobiegać automatycznemy stylowaniu (robieniu wcięć, marginesów,
+            pogrubień, podkreśleń itd). Raczej niepraktykowane. Lepszą metodą
+            jest normalizacja czyli import pliku normalize.css (dostępnego w
+            googlu) który ujednolica bazowe style przeglądarki między różnymi
+            przeglądarkami (ten plik nadpisuje style przeglądarkowe więc
+            niezalęznie gdzie uruchamiamy stronę wygląda jednakowo)
+          </p>
+          <p class="article__text">
+            Poza plikiem normalize.css warto dodać też ustawienie border-sizing:
+            border-box aby ułatwić sobie pracę z wymiarami obiektów (liczenie
+            wymiarów które uwzględnai treść+padding+ramkę jest bardziej
+            intuicyjne niż samodzielne dodawanie paddingu)
+          </p>
+          <div class="article__code">
+            <p>html {</p>
+            <p class="tab">box-sizing: border-box;</p>
+            <p>}</p>
+            <p>*, *:before, *:after</p>
+            <p class="tab">box-sizing: border-box;</p>
+            <p>}</p>
+          </div>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">BACKGROUND</h3>
+          <p class="article__text">
+            background-position: center center - określa co ma być widoczne
+            jeżeli zmniejszamy okienko przeglądarki (Czy jakaś krawędź ma być
+            zawsze widoczna, czy może środek); pierwsze center to w pionie (y),
+            drugie w poziomie (x); UWAGA- można podać też % albo odległości
+            zamiast top/left/bot/right
+          </p>
+          <p class="article__text">
+            background-repeat: repeat/repeat-x/repeat-y/no-repeat/round/space -
+            round powtarza tło ale jednocześnie ma pewne skalowanie wbudowane;
+            space - nigdy nie przycina, powtarza
+          </p>
+          <p class="article__text">
+            background-attachment: scroll/fixed/local ; scroll to domyślny
+            parametr, scrolluje się ze stroną, fixed przykleja grafikę w miejscu
+            (zaczynamy ją zakrywać ale nie przesuwa się względem startu;
+          </p>
+          <p class="article__text">
+            background-attachment: local używamy razem z overflow:hidden i
+            sprawia, że tło jakiegoś elementu scrolluje się razem z treścią tego
+            elementu (który posiada content większy od niego samego tzn. da się
+            go scrollować)
+          </p>
+          <p class="article__text">
+            background-origin: padding-box/border-box/content-box - miejsce od
+            którego liczymy background-position
+          </p>
+          <p class="article__text">
+            background-clip: border-box/padding-box/content-box - określa w
+            którym miejscu tło powinno być ucinane. domyślnie jest to border-box
+            czyli tło jest na cały element. jeżeli przestawimy na content-box to
+            tło nie pokryje pustych przestrzeni jakie ma padding a będzie tylko
+            i wyłącznie przy samej treści
+          </p>
+          <p class="article__text">
+            background-color: rgba(255, 255, 255, 0.4) - tła z przezroczystością
+          </p>
+          <p class="article__text">
+            background-size: auto/cover/contain/ - 100px 100px - określamy
+            ręcznie wymiary; auto - domyślne wymiary grafiki; cover - zawsze
+            wypełnia całość elementu (jest rozciągany, może być ucinany żeby
+            wypełnić całość) contain - zawsze się mieści cały na ekranie ale
+            może zostawiać puste przestrzenie jak proporcje nie pasują
+          </p>
+          <p class="article__text">
+            background: linear-gradient(....) - generowane ze strony
+            <a href="https://cssgradient.io/gradient-backgrounds/">
+              cssgradient.io
+            </a>
+          </p>
+        </article>
+      </section>
     </main>
   </body>
 </html>
