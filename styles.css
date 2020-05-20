@@ -234,3 +234,21 @@
   margin: 15px;
 }
 
+
+/* -----------------------Settings specific for library.html ----------------------- */
+.useful-materials{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.article--library{
+  width: 28%;
+  margin: 10px 0;
+}
+
+.article__image--library{
+  margin: 15px 0 0 0;
+  border: 1px solid gray;
+}
