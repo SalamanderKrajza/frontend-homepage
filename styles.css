@@ -24,7 +24,7 @@
 .week__heading,
 .section_heading,
 .article_heading,
-.article__subsection__heading,
+.article-subsection__heading,
 .hero {
   color: #3f232c;
   font-variant: small-caps;
@@ -168,7 +168,7 @@
   border-width: 3px;
 }
 
-.article__subsection__heading {
+.article-subsection__heading {
   margin-bottom: 15px;
 }
 
@@ -181,12 +181,12 @@
 }
 
 /* -----------------------Settings for content (prepared for specific pages)----------------------- */
-.main__list {
+.main-list {
   list-style: none;
   overflow: hidden;
 }
 
-.main__list li {
+.main-list__item {
   float: left;
   padding: 6px;
 }
@@ -207,8 +207,10 @@
   display: inline-block;
 }
 
-.article__code {
-  border: 1px solid black;
+.article__code,
+.article-subsection__code {
+  border: 1px solid bla,;
+  border:-subsection 1px solid black;
   border-radius: 10px;
   padding: 18px 40px;
   display: inline-block;
@@ -217,6 +219,8 @@
   letter-spacing: 1px;
 }
 
+.article-subsection__small-code,
+.list__small-code,
 .article__small-code {
   border: 1px solid black;
   border-radius: 10px;
@@ -226,11 +230,15 @@
   letter-spacing: 1px;
 }
 
+.article-subsection__small-code--block,
+.list__small-code--block,
 .article__small-code--block {
   display: block;
 }
 
-.article__image {
+.article__image,
+.list__image,
+.article-subsection__image {
   border-radius: 20px;
   margin: 15px;
 }
