@@ -300,9 +300,7 @@
               <ul class="list">
                 <li class="list__item">
                   <span class="list__small-code">X.Y {...</span> albo
-                  <span class="list__small-code"
-                    >article.highlighted {...</span
-                  >
+                  <span class="list__small-code">article.highlighted {...</span>
                 </li>
               </ul>
             </li>
@@ -340,11 +338,15 @@
             </p>
             <p class="article-subsection__text">
               Zmienne tworzymy przez polecenie <br />
-              <span class="article-subsection__small-code">let name = 'value'</span>
+              <span class="article-subsection__small-code"
+                >let name = 'value'</span
+              >
             </p>
             <p class="article-subsection__text">
               Stałe tworzymy przez polecenie <br />
-              <span class="article-subsection__small-code">const name = 'value'</span>
+              <span class="article-subsection__small-code"
+                >const name = 'value'</span
+              >
             </p>
             <p class="article-subsection__text">
               Aby wykorzystać zmienną w ramach jakiegoś stringa należy opakować
@@ -368,7 +370,9 @@
             <p class="article-subsection__text">
               Console log (komunikat widoczny w konsoli dostępnej pod F12)
               wywołujemy tak: <br />
-              <span class="article-subsection__small-code">console.log('value')</span>
+              <span class="article-subsection__small-code"
+                >console.log('value')</span
+              >
             </p>
           </section>
         </article>
@@ -1230,8 +1234,7 @@
               można wydzielić sekcję address gdzie będzie miasto/kraj/ulica
               itd)<br />
               <b>
-                &lt;legend&gt;Nag&lstrok;&oacute;wek
-                fieldsetu&lt;/legend&gt;
+                &lt;legend&gt;Nag&lstrok;&oacute;wek fieldsetu&lt;/legend&gt;
               </b>
               - opisuje daną grupę pól. Legend trzeba zawrzeć wewnątrz fieldsetu
             </li>
@@ -1570,6 +1573,327 @@
               <b>const myresult = (a>b) ? true : false;</b>
             </p>
           </section>
+        </article>
+      </section>
+      <section id="week7" class="week anchorOffset">
+        <h2 class="week__heading">Tydzień 7:</h2>
+        <article class="article">
+          <h3 class="article__heading">Pseudoelementy ::after i ::before</h3>
+          <p class="article__text">
+            Pseudoelementy pozwalają na tworzenie treśći z poziomu plików
+            CSS.<br />
+            Kiedyś pseudoelementy zapisywano z użyciem jednego dwukropka,
+            obecnie stosuje się dwa (choć oba warianty powinny działać)<br />
+            Przykłądowy zapis:<br />
+            <span class="article__small-code">
+              <b>.moja-klasa::after / .moja-klasa::before</b>
+            </span>
+          </p>
+          <p class="article__text">
+            Żeby wpisać jakąś treść do pseudoelementu używamy własności
+            "content":<br />
+            <span class="article__small-code">
+              .moja-klasa::after { <b>content: "Moja treść"</b> }
+            </span>
+          </p>
+          <p class="article__text">
+            Treść wygenerowana prezz własność CONTNET nie jest częścią DOM'u -
+            to znaczy, że nie można jej zaznaczyć myszką ani skopiować.
+          </p>
+          <p class="article__text">
+            elementy ::before i ::after są pierwszym/ostatnim DZIECKIEM elementu
+            do których zostały dopisane. To znaczy, że np. dodajac taki element
+            do a::after i dopisując jakąś treść, ta treść również będzie się
+            zachowywała jak łącze
+          </p>
+          <p class="article__text">
+            pseudoelementy mogą nie zawierać treści (tekstowej) a być np.
+            dekoratorami opisanymi przez inne własności CSSowe (np. jakiś
+            kształt o zdefiniowanych wymiarach i kolorze). Mogą być stosowane
+            dekoracyjnie (np. jako jakaś kropka przed każdym tytułem artykułu)
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            pseudoklasy :hover/:visited/:focus/...
+          </h3>
+          <p class="article__text">
+            Na ogół są to style które aktywują się kiedy konkretne warunki
+            zostaną spełnione. Mają wbydowany mechanizm rozpoznawania czy dane
+            okoliczności występują (np. nad elementem znajduje się kursor) i
+            wyświetlenia zdefiniowanych w tej stytuacji stylów
+          </p>
+          <p class="article__text">
+            <strong>:focus</strong> - określa element który aktualnie jest
+            uzupełniany/zaznaczony (np. w trakcie wpisywania treści w formularz
+            dane pole może mieć inne obramowanie)
+          </p>
+          <p class="article__text">
+            <strong>:first-child / :last-child / :nth-child</strong> - w
+            przypadku tych pseudoklas działanie może nie być do końca intuicyjne
+            - nie narzucamy bowiem stylów dla pierwszego dziecka elementu
+            któremu nadamy daną klasę, natomiast nadamy style właśnie temu
+            elementomi z klasą :fist-child w sytuacji, gdy to on jest czyimś
+            pierwszym dzieckiem.<br />
+            Przykładowo, jeżeli będziemy mieli listę artykułów i dla elementu
+            .article nadamy :first-child to wtedy te style dostanie artykół
+            będący pierwszym dzieckiem danej sekcji
+          </p>
+          <p class="article__text">
+            <strong>:not(selektor)</strong> - warunek który sprawdza czy dany
+            element nie zawiera danego selektora. Użyteczne w przypadku, gdyby
+            inne selektory (np. :hover) były aplikowane tylko i wyłącznie, kiedy
+            dany element nie jest jest np. aktualnie aktywny. Wtedy można dać
+            element:not('.active'):hover
+          </p>
+          <p class="article__text">
+            <b>Więcej pseudoelementów</b> - można znaleźć w dokumentacji:
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+              >link</a
+            >
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            node.js - taki JavaScript uruchamiany poza przeglądarką
+          </h3>
+          <p class="article__text">
+            NODE nie ma dostępu do DOM - to znaczy nie może podejrzeć danych
+            naszej strony i operować na nich. Nie można z niego wywoływać
+            żadnych querySelectorów ani nic takiego.
+          </p>
+          <p class="article__text">
+            Pozwala na wywoływanie skryptów JS z poziomu konsoli (np w celu
+            szybkich testów). Można założyć plik np. script.js a w nim polecenia
+            (np. console.log('hello node')) a z poziomu terminala potem wywołać
+            skrypt przez "node script.js" jak z plikami pythonowymi przez
+            "python mypython.py"; dzięki temu nie trzeba stawiać żadnego html'a
+            i importować plikó JSowych a potem ich wywurzać alertami żeby
+            przetestować jakieś skrypty
+          </p>
+          <p class="article__text">
+            w node można od zera tworzyc rozwiazania serwerowe/backend, a można
+            też importować i testować gotowe rozwiązania pobierane i uruchamiane
+            z jego poziomu (jak klocki lego!). Na drugim wariancie będziemy się
+            skupiać w ramach tego szkolenia.
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            NPM - menadżer paczek do node'a
+          </h3>
+          <p class="article__text">
+            NPM to nie jest skrót od NODE PACKAGE MANAGER chociaż tak naprawdę
+            NPM spełnia taką rolę. NPM. służy do ułatwiania procesu dodawania do
+            naszego projektu bibliotek/narzędzi<br />
+            Jest to repozytorium które zapewnia aktualizacje wersji używanych
+            narzędzi.<br />
+            Pozwala w mniejszym stopniu polegać na konfiguracji edytora i jego
+            dodatków (można np. z jego poziomu uruchamiać live-server strony bez
+            pobierania wtyczki do VSC)<br />
+            NPM można kojarzyć z takim SKLEPEM PLAY dla frontendowców =)
+          </p>
+          <p class="article__text">
+            Aby móc skorzystać z NPM'a trzeba wywołać "npm init" lub "npm init
+            -y" w folderze z naszym projektem.<br />
+            wersją z "-y" automatycznie zatwierdza wszystkie pytania
+            konfiguracyjne domyślną odpowiedzią (można je później modyfikować z
+            poziomu pliku)
+          </p>
+          <p class="article__text">
+            Po zainicjalizowaniu NPM'a należy instalować konkrene paczki które
+            nas interesują.
+          </p>
+          <div class="article__small-code">
+            npm install &lt;nazwa_paczki&gt; [--save/--save dev]
+          </div>
+          <p class="article__text">
+            Od NPM 5.0.0 Domyślnym parametrem jest --save (nie trzeba go
+            pisać)<br />
+            <strong>"--save"</strong> używamy o ile chcemy używać narzędzia w
+            przeglądarce (np. normalize.css); uzycie tej właściwości sprawia, że
+            dana paczka jest dodawana do zależności (dependencies).<br />
+            <strong>"--save dev"</strong> używamy jeżeli narzędzie jest
+            potrzebne w czasie developmentu (lokalnie), ale już nie potrzebujemy
+            go używać po wypuszczeniu strony. Przykładami może być live-server
+            albo korwersja scss na css - używamy ich przy pracy nad stroną ale
+            nie ma potrzeby ich udostępniać z projektem
+          </p>
+          <p class="article__text">
+            <strong>npm install (bez podania nazwy paczki)</strong>
+            - doinstalowuje wszystkie zdefiniowane wcześniej zależności
+            (zdefiniowane np. przez npm install &lt;nazwa_paczki&gt;). Ta
+            funkcjonalnosć pozwala udostępniać projekt bez udostępniania
+            wszystkich potrzebnych paczek (osoba pobierająca projekt może je
+            sobie doinstalować a my nie musimy ich wgrywać na serwer). Ponadto,
+            dzięki temu można w nieaktywnych projektach usunąć folder
+            node_modules (który potrafi zajmować ponad kilka giga!) a w momencie
+            powrotu do projektu po prostu pobrać ponownie zależności jedną
+            komendą
+          </p>
+          <p class="article__text">
+            Folderu node_modules nie powinno się commitować (należy dodać go do
+            .gitignore)
+          </p>
+          <p class="article__text">
+            Alternatywnym menadżerem paczek dla NPMa jest YARN; oba są podobne w
+            funkcjonowaniu i łatwo się nauczyć drugiego po poznaniu pierwszego
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            npm run - czyli zdefiniowane skrypty
+          </h3>
+          <p class="article__text">
+            Wewnątrz pliku package.json (generowanego przy wywołaniu npm init)
+            możemy zdefiniować własne skrypty<br />
+            skrypty definiujemy metodą key:value gdzie jako klucz podajemy
+            polecenie które będzie trzeba podać by wywołać skrypt zdefiniowany
+            jako value
+          </p>
+          <p class="article__text">
+            Może być stosowane np. do ustawiania konwersji plików SCSS na CSS
+            bez każdorazowego definiowania ścieżek do źródła i plików docelowych
+          </p>
+          <p class="article__text">
+            Wywołujemy przez
+            <span class="article__small-code"
+              >npm run &lt;nazwa_polecenia&gt;</span
+            >
+          </p>
+          <p class="article__text">
+            Treść polecenia jest analogiczna do tego co byśmy wpisywali w
+            terminalu. Można tam np. coś pobrać i wywołać npxem (tzn "cow":"npx
+            cowsay SIEMA SIEMA")
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            NPX - wywoływanie narzędzia bez instalowania na stałe
+          </h3>
+          <p class="article__text">
+            <span class="article__small-code"
+              >npx &lt;nazwa_narzędzia&gt; [parametry]</span
+            >
+            na przykład:
+            <span class="article__small-code"> npx cowsay SIEMA SIEMA</span>
+          </p>
+          <p class="article__text">
+            NPX służy do wywołania narzędzia z zadanymi parametrami bez
+            pobierania na stałe (pobiera do folderu tymczasowego, uruchamia,
+            kasuje)<br />
+            Wykorzystujemy głównie do narzędzi konsolowych.
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            Preprocesor - narzędzie które zmienia własną składnie na kod
+            rozumiany przez np. przeglądarkę
+          </h3>
+          <p class="article__text">
+            Do tworzenia styli CSS mamy dwa preprocesory - SASS oraz SCSS. Kod
+            pisany w tych językach jest wygodniejszy w obsłudze przez
+            programistę ale niezrozumiały przez przeglądarkę (wymaga konwersji
+            na czysty kod CSS)<br />
+            pliki .scss są dla developera, później są konwertowane do .css dla
+            przeglądarki
+          </p>
+          <p class="article__text">
+            SASS vs SCSS - to dwa różne wersje składniowe, można używać jednego
+            i drugiego. SCSS jest zbliżony do CSSa np. w kwestii używania
+            klamerek {}, SASS pracuje na wcięciach (a więc jest bardziej podobny
+            do Pythona).<br />
+            Te preprocesory rozszerzają możliwośći plików CSS zachowując
+            jednocześnie wszystkie oryginalne polecenia. (Można używać
+            wszystkiego co w oryginalnym CSSie)
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            Nowe własności w ramach SCSS
+          </h3>
+          <p class="article__text">
+            <b>$zmienna: wartość;</b>- tak definiujemy zmienne w SASSie<br />
+            <b>color: $zmienna</b> - tak używamy zmiennej w SASSie
+          </p>
+          <p class="article__text">
+            <b>@mixin / @include</b>- służa do definiowania/używania funkcji
+            zawierającej kilka paarametrów.<br />
+            Np. możemy chcieć takim mixinem zaokrąglać rogi definiując:
+          </p>
+          <div class="article__small-code">
+            @mixin <b>borderBackground</b> {
+            <div class="tab">border-radius: 10px;</div>
+            <div class="tab">background: hotpink;</div>
+            }
+          </div>
+          <p class="article__text">
+            Żeby użyć właściwości zdefiniowanych mixinem używamy<br />
+            <span class="article__small-code">
+              * { @include <b>borderBackground</b> }
+            </span>
+          </p>
+          <p class="article__text">
+            Można stworzyć mixin z parametrami
+          </p>
+          <div class="article__small-code">
+            borderBackgroundParameter(<b>$radius, $background</b>) {
+            <div class="tab">border-radius: <b>$radius</b>;</div>
+            <div class="tab">background: <b>$background</b>;</div>
+            }
+          </div>
+          <p class="article__text">
+            Wywołanie mixinu z paramterem<br />
+            <span class="article__small-code">
+              * { @include borderBackgroundParameter(16, hotpink) }
+            </span>
+          </p>
+          <p class="article__text">
+            <b>PARENT SELECTOR - &</b> - używany przy zagnieżdżeniach (dobre do
+            BEMA) np:
+          </p>
+          <div class="article__small-code">
+            .about {
+            <div class="tab">color: red;</div>
+            <div class="tab"><b>&__title</b> {</div>
+            <div class="doubletab">font-size: 20;</div>
+            <div class="tab">}</div>
+            }
+          </div>
+          <p class="article__text">
+            <b>@extend selektor;</b> - dopisane do klasy dorzuca style
+            zawarte w podanej klasie NA POCZĄTKU (tzn. jeżeli dopiszemy to do
+            .main { ... } nawet na końcu definicji .main to style .font-style
+            będą i tak wrzucone na sam początek (a każdy styl definiowany w
+            mainie będzie to nadpisywał)
+          </p>
+          <div class="article__small-code">
+            .special-font {
+            <div class="tab">@extend .font-style;</div>
+            }
+          </div>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            node-sass - paczka do konwertowania plików scss na css
+          </h3>
+          <p class="article__text">
+            <b>(npm install --save-dev) node-sass</b> - polecenie instalacyjne.
+            Instalujemy jak --save-dev ponieważ konwersja plikó następuje
+            podczas developmentu strony, nastomiast później przesyłane są pliki
+            już przekonwertowane.<br />
+            <b>node-sass [options] source/file.scss result/file.css</b> -
+            przekonwartowanie pliku podanego jako source i zapisanie go jako
+            result<br />
+            Z dostępnych opcji najbardziej interesuje nas "-w", tzn:<br />
+            <b>node-sass source/file.scss result/file.css -w</b> - Opcja watch
+            sprawia, że w momencie wprowadzenia zmian w pliku scss to będzie
+            automatycznie generował nowy plik css; żeby wyjść z tego polecenia
+            klikamy CTRL+C<br />
+            Można zdefiniować te polecenie w naszych skryptach w package.json by
+            później nie podawać ścieżki do plików a wywoływać "NPN RUN SASS"
+          </p>
         </article>
       </section>
     </main>
