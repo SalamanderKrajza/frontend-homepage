@@ -1862,11 +1862,11 @@
             }
           </div>
           <p class="article__text">
-            <b>@extend selektor;</b> - dopisane do klasy dorzuca style
-            zawarte w podanej klasie NA POCZĄTKU (tzn. jeżeli dopiszemy to do
-            .main { ... } nawet na końcu definicji .main to style .font-style
-            będą i tak wrzucone na sam początek (a każdy styl definiowany w
-            mainie będzie to nadpisywał)
+            <b>@extend selektor;</b> - dopisane do klasy dorzuca style zawarte w
+            podanej klasie NA POCZĄTKU (tzn. jeżeli dopiszemy to do .main { ...
+            } nawet na końcu definicji .main to style .font-style będą i tak
+            wrzucone na sam początek (a każdy styl definiowany w mainie będzie
+            to nadpisywał)
           </p>
           <div class="article__small-code">
             .special-font {
@@ -1893,6 +1893,281 @@
             klikamy CTRL+C<br />
             Można zdefiniować te polecenie w naszych skryptach w package.json by
             później nie podawać ścieżki do plików a wywoływać "NPN RUN SASS"
+          </p>
+        </article>
+      </section>
+      <section id="week8" class="week anchorOffset">
+        <h2 class="week__heading">Tydzień 8:</h2>
+        <article class="article">
+          <h3 class="article__heading">Importy w CSS oraz JS</h3>
+          <section class="article-subsection">
+            <h4 class="article-subsection__heading">
+              Import całości pliku css(scss) do innego pliku css
+            </h4>
+            <p class="article-subsection__text">
+              Używamy do tego polecenia @import "źródło", np.<br />
+              <span class="article-subsection__small-code"
+                >@import "modules/week-summary.scss"</span
+              >
+            </p>
+            <p class="article-subsection__text">
+              Można stosować z linkami do zewnętrznych plików, np.<br />
+              <span class="article-subsection__small-code">
+                @import
+                https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css
+              </span>
+            </p>
+          </section>
+          <section class="article-subsection">
+            <h4 class="article-subsection__heading">
+              Import między plikami JavaScript
+            </h4>
+            <p class="article-subsection__text">
+              Są dwie metody - CommonJS i ES6 Modules
+            </p>
+            <p class="article-subsection__text">
+              Aby korzystać z modułów trzeba dodać do znacznika script parametr
+              type="module" tj: `<br />
+              <span class="article-subsection__small-code">
+                &lt;script scr=&quot;main.js&quot;
+                type=&quot;module&quot;&gt;&lt;/script&gt;&grave;
+              </span>
+            </p>
+            <p class="article-subsection__text">
+              [IMPORT ES6] Żeby exportować jakąś funkcję trzeba ją zapisać w
+              innym pliku ze słowem kluczowym export przed jej definicją tj np:
+              <br />
+              <span class="article-subsection__small-code">
+                export const hello = (name) => { return ;cześć ${name}!; }
+              </span>
+            </p>
+            <p class="article-subsection__text">
+              Import polega na podaniu słowa kluczowego import, nazwy elementów
+              które pobieramy, słowa kluczowego from i źródła, na przykład: '<br />
+              <span class="article-subsection__small-code">
+                import {hello, myname} from './hello.js'
+              </span>
+            </p>
+            <p class="article-subsection__text">
+              export/import default - o ile w ramach pliku użyjemy słów
+              kluczowych &quot;export default &lt;nazwa&gt;;&quot; to przy
+              imporcie nie potrzeba klamerek. np: <br />
+              <span class="article-subsection__small-code">
+                const myName = 'Aleksander'; <br />
+                export default myName;<br /> </span
+              ><br />
+              <span class="article-subsection__small-code">
+                import myNameAsSomeVariable from myname.js
+              </span>
+            </p>
+            <p class="article-subsection__text">
+              UWAGA - przy imporcie defaultowym można importować jako inną nazwę
+              niż zdefiniowano w ramach źródła!
+            </p>
+            <p class="article-subsection__text">
+              Można importować gotowe moduły (pobierane npmem) przez: <br />
+              <span class="article-subsection__small-code">
+                import nazwaRzeczy from 'nazwa-modulu' </span
+              ><br />
+              UWAGA! Możliwe, że do działania wymagany jest webpack!
+            </p>
+            <p class="article-subsection__text">
+              Inna metoda (od defaulta) importowania elementów pod inną nazwą to
+              użycie <b>`as`</b> np: <br />
+              <span class="article-subsection__small-code">
+                import {myAwesomeName as myName} from myname.js
+              </span>
+            </p>
+            <p class="article-subsection__text">
+              Możliwy mjest zaimportowanie wszystkich exportów danego pliku
+              poprzez:
+              <span class="article-subsection__small-code">
+                import * as myImports from source.js </span
+              ><br />
+              Do konkretnych (zaimportowanych) zmiennych/funckcji odwołujemy się
+              po kropce ich nazwą tj. np. <br />
+              <span class="article-subsection__small-code">
+                myImports.hello
+              </span>
+            </p>
+          </section>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            WEBPACK - podstawowe narzędzie frontendowca
+          </h3>
+          <p class="article__text">
+            WEBPACK - podstawowe narzędzie frontendowca; może automatyzować
+            procesy, ułatwia development, używają go wiodące frameworki i
+            biblioteki
+          </p>
+          <p class="article__text">
+            Aby go zainstalować trzeba mieć zainicjalizowany projekt w npm i
+            wywołać <br />
+            <span class="article__small-code">
+              npm install webpack webpack-cli --save-dev
+            </span>
+          </p>
+          <p class="article__text">
+            Dokumentacja webpacka jest (wraz z opisem uruchamiania) dostępna
+            tutaj:
+            <a href="https://webpack.js.org/guides/getting-started/">
+              dokumentacja
+            </a>
+          </p>
+          <p class="article__text">
+            Webpack nie ma pliku konfiguracyjnego, ma jakieś domyślne ścieżki.
+            Wywołanie webpacka robi się przez <br />
+            <span class="article__small-code"> npx webpack </span><br />
+            To polecenie zwróci błędny (informacje, że potrzebuje pliku
+            src/index.js oraz pliku index.html)<br />
+            Po stworzeniu tych plików można wywołać polecenie ponownie - wtedy
+            webpack przygotuje plik `dist/main.js` - mało czytelny (dla
+            człowieka) plik wygenerowany z naszych skryptów do udostępnienia na
+            stronie.
+          </p>
+          <p class="article__text">
+            Mając webpack można importować paczki/moduły w ramach JS prez:<br />
+            <span class="article__small-code">
+              import nazwaImportu from 'nazwaPaczki/nazwaModułu'
+            </span>
+            <br />
+            Przykładowym użyciem może być<br />
+            <span class="article__small-code">
+              import moment from 'moment' <br />
+              moment().startOf('day').fromNow()
+            </span>
+            <br />
+            webpack ogarnie skąd i jak ma być zaimportowane. Plik stworzony
+            ręcznie i nie przepuszczony przez webpacka nie będzie działał
+            poprawnie z takim importem
+          </p>
+          <p class="article__text">
+            Weback wygeneruje plik js który będzie w sobie zawierał te
+            zaimportowane zależnośći
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            Webpack starter kit
+          </h3>
+          <p class="article__text">
+            WTF WEBPACK STARTER KIT - zawiera serwer lokalny z autoodświeżąniem,
+            wsparcie dla scss i sourcemap, minifikacje, babel oraz publikacje na
+            github pages
+          </p>
+          <p class="article__text">
+            babel - tłumaczy kod na inne wersje (dla wsparcia starszych
+            przeglądarek)
+          </p>
+          <p class="article__text">
+            Używamy wchodząc w link
+            <a
+              href="https://github.com/maciejkorsan/wtf-webpack-starter/generate"
+              >(Kliknij aby przekierować)</a
+            ><br />
+            https://github.com/maciejkorsan/wtf-webpack-starter/generate<br />
+            https://github.com/maciejkorsan/wtf-webpack-starter/ <br />
+            a następnie generując z jego pomocą nowe repozytorium (które zawiera
+            te wszystkie startowe elementy)
+          </p>
+          <p class="article__text">
+            Uruchomienie live serwera wymaga zainstalowania zależności prezz
+            <b>npm install</b> a potem uruchomienie serwera przez
+            <b>npm run start</b>
+            wynik dostęny pod localhost:8080
+          </p>
+          <p class="article__text">
+            Pracując z webpackiem ścieżki podajemy względem plików źródłowych
+            (tak jak z nimi pracujemy) a nie serwerowych; webpack sobie go
+            znajdzie i przeniesie
+          </p>
+          <p class="article__text">
+            WEBPACK dodaje do nazw plików hashe żeby przeglądarka nie trzymała
+            starych wersji a pobierała zaktualizowane w przypadku jakiś
+            modyfikacji
+          </p>
+          <p class="article__text">
+            Aby dodać nowy plik do webpacka (np. nową podstronę .html) -
+            edytujemy plik <b>webpack.common.js</b>, kopiujemy jeden z wpisów
+            <b>`new HtmlWebpackPlugin { ...`</b> i uzupełniamy tą nową ścieżką
+            <br />
+            W ranach tego wpisu ustalamy jakie pliki css oraz js są importowane
+            do danego htmla (nie trzeba robić już importów wewnątrz samego
+            htmla)
+          </p>
+          <p class="article__text">
+            Mając loader scssów wgrany do konfiguracji webpacka można w ramach
+            pliku `index.js` zaimportować plik scss a on zostanie
+            przekonwartowany do cssa. zeby to zrobić piszemy
+            <b>import '../scss/main.scss'</b>
+          </p>
+          <p class="article__text">
+            Żeby zaimportować istniejącą paczkę w npm którą pobrano do
+            node_modules można to zrobić prezz <b>@import "~nazwa-paczki"</b> np
+            <b>@import "~normalize.css"</b> w ramach pliku `main.scss`. UWAGA
+            "~" nie jest przez pomyłkę =)
+          </p>
+          <p class="article__text">
+            SOURCEMAPA pozwala na podejrzenie gdzie jest dana linijka (która
+            wykonuje np console.loga lub narzuca styl w csss) w ramach
+            ORYGINALNYCH PLIKÓW! Mega wygodne przy pracy z plikami scss gdzie
+            bez sourcemapy (a więc webpacka) z inspektora moglibyśmy podejrzeć
+            jedynie przekonwertowany plik .css a nie ten plik na którym
+            pracowaliśmy w fazie developmentu
+          </p>
+          <p class="article__text">
+            DIST to katalog który jest efektem finalnym pracy z webpackiem. To
+            jego udostępniamy (publikujemy) na serwerze
+          </p>
+          <p class="article__text">
+            Pliki w katalogu PUBLIC są kopiowane do dist bez żadnych zmian
+            robionych z poziomu webpacka
+          </p>
+          <p class="article__text">
+            Publikacja strony na github pages jest przeprowadzana przez
+            polecenie <b>npm run publish</b> które tworzy nam nową gałąź, wrzuca
+            tam pliki z DIST, pushuje i udostępnai na github pages
+          </p>
+        </article>
+        <article class="article">
+          <h3 class="article__heading">
+            ZMIENNE W BAZOWYM CSS (Czy raczej CSS CUSTOM PROPERTIES)
+          </h3>
+          <p class="article__text">
+            definiujemy w ramach elementu <b>:root { ...</b> podając jego nazwę
+            po dwóch myślnikach np.<br />
+            <span class="article__small-code">
+              :root{ --small-padding: 8px; --text-color: yellow; }
+            </span>
+          </p>
+          <p class="article__text">
+            Użycie takiej zmiennej wykorzystuje słowo kluczowe VAR tj np. <br />
+            <span class="article__small-code">
+              h1 { color: var(--text-color);}
+            </span>
+          </p>
+          <p class="article__text">
+            Te zmienne (W csss) żyją też w przeglądarce, tj można je modyfikować
+            po wyświetleniu strony. Zmienne definiowane jako SCSS są wczytywane
+            w momencie konwersji pliku na plik .css i nie można ich aktualizować
+            (w przeglądarce są zastępowane przez swoje wartości)
+          </p>
+          <p class="article__text">
+            Nadpisanie takiej zmiennej z poziomu JS:
+            <br>
+            <span class="article__small-code">
+              document.documentElement.style.setProperty('--zmienna', 'wartość')
+            </span>
+          </p>
+          <p class="article__text">
+            Użyteczne przy przełączaniu strony np. na darkmode
+          </p>
+          <p class="article__text">
+            Można te zmienne nadpisywać z użyciem @media tj np.<br> 
+            <span class="article__small-code">
+              @media (min-width: 768px) { :root { --small-padding: 16px } }
+            </span>
           </p>
         </article>
       </section>
